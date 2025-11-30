@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 const SkillsSection = () => {
   const skills = [
     { icon: "⚛️", name: "React", level: "Advanced", bgColor: "bg-blue-500" },
@@ -20,13 +22,34 @@ const SkillsSection = () => {
       
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {skills.map((skill, index) => (
-          <div key={index} className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300 hover:scale-105 text-center">
+          <motion.div 
+            key={index} 
+            className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300 text-center"
+            whileHover={{ 
+              scale: 1.1,
+              rotate: [0, -5, 5, -5, 0],
+              transition: { duration: 0.3 }
+            }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: index * 0.05,
+              type: "spring",
+              stiffness: 100
+            }}
+          >
             <div className={`w-12 h-12 ${skill.bgColor} rounded-full mx-auto mb-3 flex items-center justify-center`}>
               <span className="text-white text-xl">{skill.icon}</span>
             </div>
-            <h3 className="font-bold text-gray-800 mb-1">{skill.name}</h3>
+            <motion.h3 
+              className="font-bold text-gray-800 mb-1"
+              whileHover={{ scale: 1.2 }}
+            >
+              {skill.name}
+            </motion.h3>
             <p className="text-gray-600 text-xs">{skill.level}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

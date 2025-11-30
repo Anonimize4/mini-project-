@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 const ProjectsSection = () => {
   const projects = [
     {
@@ -71,7 +73,17 @@ const ProjectsSection = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <div key={index} className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300 hover:scale-105">
+          <motion.div 
+            key={index} 
+            className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300"
+            whileHover={{ 
+              scale: 1.05,
+              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+            }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
             <div className="mb-4">
               <div className={`w-full h-40 bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center`}>
                 <span className="text-white text-4xl font-bold">{project.icon}</span>
@@ -87,10 +99,22 @@ const ProjectsSection = () => {
               ))}
             </div>
             <div className="flex gap-4">
-              <button className="text-blue-600 hover:text-blue-800 text-sm font-semibold">View Demo</button>
-              <button className="text-gray-600 hover:text-gray-800 text-sm font-semibold">GitHub</button>
+              <motion.button 
+                className="text-blue-600 hover:text-blue-800 text-sm font-semibold"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View Demo
+              </motion.button>
+              <motion.button 
+                className="text-gray-600 hover:text-gray-800 text-sm font-semibold"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                GitHub
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
