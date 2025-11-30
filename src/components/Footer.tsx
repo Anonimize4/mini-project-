@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   return (
@@ -40,9 +41,23 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-6 pt-6 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 Samuel's Portfolio. All rights reserved.
-          </p>
+          <div className="flex items-center justify-center space-x-2">
+            <motion.div
+              className="w-2 h-2 bg-green-500 rounded-full"
+              animate={{
+                opacity: [1, 0.3, 1],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <p className="text-gray-400 text-sm">
+              © 2024 Samuel's Portfolio. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
