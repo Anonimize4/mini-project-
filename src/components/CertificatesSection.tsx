@@ -40,7 +40,7 @@ const CertificatesSection = () => {
 
   return (
     <section id="certificates" className="mb-12">
-      <h2 className="text-3xl font-bold text-white mb-8 text-center">Certificates</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center font-mono" style={{ color: '#39FF14' }}>Certificates</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {certificates.map((certificate, index) => (

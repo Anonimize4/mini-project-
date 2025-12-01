@@ -18,7 +18,8 @@ const Header: React.FC = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-emerald-400 text-xl font-bold tracking-wider font-mono"
+        className="text-xl font-bold tracking-wider font-mono"
+        style={{ color: '#39FF14' }}
       >
         {"<SAMUEL BELAY/>"}
       </motion.div>

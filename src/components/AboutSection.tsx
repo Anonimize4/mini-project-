@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const AboutSection = () => {
   return (
     <section id="about" className="mb-12">
-      <h2 className="text-3xl font-bold text-white mb-8 text-center">About Me</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center font-mono" style={{ color: '#39FF14' }}>About Me</h2>
       
       <div className="flex flex-col lg:flex-row gap-8">
         <motion.div 
@@ -13,7 +13,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold text-blue-300 mb-4">whoami?</h3>
+          <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>whoami?</h3>
           <motion.div 
             className="bg-blue-800 rounded-lg p-6 shadow-lg"
             whileHover={{ scale: 1.02 }}
@@ -37,7 +37,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold text-blue-300 mb-4">My Experience</h3>
+          <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>My Experience</h3>
           <motion.div 
             className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400"
             whileHover={{ scale: 1.02 }}
