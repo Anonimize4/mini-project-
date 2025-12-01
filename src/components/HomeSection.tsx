@@ -16,7 +16,8 @@ const HomeSection = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 mb-6 font-mono tracking-wide"
+            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300 mb-6 font-mono tracking-wide"
+            style={{ backgroundImage: 'linear-gradient(to right, #39FF14, #32CD32)' }}
           >
             {"<Welcome to Samuel's Portfolio/>"}
           </motion.h1>
