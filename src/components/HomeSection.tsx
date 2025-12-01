@@ -21,23 +21,6 @@ const HomeSection = () => {
             {"<Welcome to Samuel's Portfolio/>"}
           </motion.h1>
           
-          <motion.p 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-gray-300 text-lg mb-8 font-mono"
-          >
-            <span className="text-emerald-400">const</span> developer = {"{"}
-            <br />
-            &nbsp;&nbsp;<span className="text-cyan-400">name:</span> <span className="text-white">"Full Stack Developer"</span>,
-            <br />
-            &nbsp;&nbsp;<span className="text-cyan-400">role:</span> <span className="text-white">"Software Engineer"</span>,
-            <br />
-            &nbsp;&nbsp;<span className="text-cyan-400">passion:</span> <span className="text-white">"Problem Solver"</span>
-            <br />
-            {"};"}
-          </motion.p>
-          
           <motion.a 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
