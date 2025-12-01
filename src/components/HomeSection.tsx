@@ -58,7 +58,7 @@ const HomeSection = () => {
               }}
             />
             <motion.img 
-              src="/src/assets/profile-photo.jpg" 
+              src="/src/assets/photo.jpg" 
               alt="Samuel Belay" 
               className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-emerald-400 shadow-xl shadow-emerald-400/30"
               onError={(e) => {
