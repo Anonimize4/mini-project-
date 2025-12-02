@@ -5,7 +5,7 @@ const AboutSection = () => {
     <section id="about" className="mb-12">
       <h2 className="text-3xl font-bold mb-8 text-center font-mono" style={{ color: '#39FF14' }}>About Me</h2>
       
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-8 mb-8">
         <motion.div 
           className="flex-1"
           initial={{ opacity: 0, x: -50 }}
@@ -68,6 +68,66 @@ const AboutSection = () => {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Community Participation Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Community Participation</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+                icon: "🌐",
+                title: "Open Source Contributor",
+                description: "Active contributor to various open-source projects on GitHub"
+              },
+              {
+                icon: "🎓",
+                title: "Tech Mentor",
+                description: "Mentoring junior developers in local coding bootcamps"
+              },
+              {
+                icon: "📚",
+                title: "Technical Blogger",
+                description: "Writing articles on web development and cybersecurity"
+              },
+              {
+                icon: "🏆",
+                title: "Hackathon Participant",
+                description: "Regular participant in national hackathons and coding competitions"
+              },
+              {
+                icon: "👥",
+                title: "Tech Meetup Organizer",
+                description: "Organizing monthly tech meetups and workshops"
+              },
+              {
+                icon: "🔬",
+                title: "Research Volunteer",
+                description: "Contributing to cybersecurity research initiatives"
+              }
+          ].map((activity, index) => (
+              <motion.div 
+                key={index}
+                className="p-4 border-l-4 border-blue-500 hover:bg-gray-800/50 transition-colors duration-300"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ x: 10 }}
+              >
+                <div className="flex items-center space-x-3 mb-2">
+                  <span className="text-2xl">{activity.icon}</span>
+                  <h4 className="text-white font-semibold">{activity.title}</h4>
+                </div>
+                <p className="text-gray-400 text-sm">{activity.description}</p>
+              </motion.div>
+            ))}
+        </div>
+      </motion.div>
     </section>
   );
 };
