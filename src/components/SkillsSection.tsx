@@ -5,26 +5,16 @@ const SkillsSection = () => {
     { icon: "⚛️", name: "React", level: "Advanced", bgColor: "bg-blue-500" },
     { icon: "🟢", name: "Node.js", level: "Advanced", bgColor: "bg-green-500" },
     { icon: "📝", name: "TypeScript", level: "Advanced", bgColor: "bg-yellow-500" },
-    { icon: "🎨", name: "Tailwind CSS", level: "Advanced", bgColor: "bg-purple-500" },
     { icon: "⚡", name: "JavaScript", level: "Expert", bgColor: "bg-pink-500" },
-    { icon: "🔄", name: "Redux", level: "Intermediate", bgColor: "bg-emerald-500" },
-    { icon: "📱", name: "React Native", level: "Intermediate", bgColor: "bg-indigo-500" },
-    { icon: "🐍", name: "Python", level: "Advanced", bgColor: "bg-blue-600" },
-    { icon: "🌐", name: "Vue.js", level: "Intermediate", bgColor: "bg-green-600" },
-    { icon: "🔗", name: "API Development", level: "Advanced", bgColor: "bg-orange-500" }
+    { icon: "🐍", name: "Python", level: "Advanced", bgColor: "bg-blue-600" }
   ];
 
   const cybersecuritySkills = [
     { icon: "🔒", name: "Network Security", level: "Advanced", bgColor: "bg-red-500" },
     { icon: "🛡️", name: "Penetration Testing", level: "Intermediate", bgColor: "bg-red-600" },
     { icon: "🔍", name: "Vulnerability Assessment", level: "Advanced", bgColor: "bg-orange-600" },
-    { icon: "🔐", name: "Encryption & Cryptography", level: "Intermediate", bgColor: "bg-purple-600" },
     { icon: "🚨", name: "Incident Response", level: "Intermediate", bgColor: "bg-yellow-600" },
-    { icon: "📊", name: "Security Monitoring", level: "Advanced", bgColor: "bg-teal-600" },
-    { icon: "☁️", name: "Cloud Security", level: "Intermediate", bgColor: "bg-gray-600" },
-    { icon: "🔧", name: "Git & GitHub", level: "Advanced", bgColor: "bg-gray-700" },
-    { icon: "🚀", name: "Docker Security", level: "Intermediate", bgColor: "bg-cyan-600" },
-    { icon: "🧪", name: "Security Testing", level: "Advanced", bgColor: "bg-pink-600" }
+    { icon: "📊", name: "Security Monitoring", level: "Advanced", bgColor: "bg-teal-600" }
   ];
 
   const SkillItem = ({ skill, index, delay = 0 }: { skill: any; index: number; delay?: number }) => (
