@@ -14,9 +14,10 @@ const HomeSection = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wide"
+            className="text-4xl md:text-5xl font-bold mb-6 font-mono tracking-wide"
           >
-            {"Hi,I'm SAMUEL BELAY"}
+            <span className="text-white">{"Hi,I'm "}</span>
+            <span style={{ color: '#39FF14' }}>{"SAMUEL BELAY"}</span>
           </motion.h1>
           
           <motion.a 
