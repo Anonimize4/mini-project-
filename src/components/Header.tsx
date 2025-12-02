@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="backdrop-blur-md border-b border-emerald-500/20 w-full h-16 flex items-center justify-between px-4 fixed top-0 left-0 right-0 z-50 shadow-lg shadow-emerald-500/10" style={{ backgroundColor: '#38aecc' }}>
+    <header className="backdrop-blur-md border-b border-emerald-500/20 w-full h-16 flex items-center justify-between px-4 fixed top-0 left-0 right-0 z-50 shadow-lg shadow-emerald-500/10 bg-blue-950">
      
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
