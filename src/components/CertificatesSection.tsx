@@ -42,22 +42,52 @@ const CertificatesSection = () => {
     <section id="certificates" className="mb-12">
       <h2 className="text-3xl font-bold mb-8 text-center font-mono" style={{ color: '#39FF14' }}>Certificates</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {certificates.map((certificate, index) => (
-          <div key={index} className="rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-shadow duration-300" style={{ backgroundColor: '#38aecc' }}>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-white text-2xl font-bold">{certificate.icon}</span>
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Left Side - Certificate List */}
+        <div className="flex-1">
+          <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certifications</h3>
+          <div className="space-y-4">
+            {certificates.map((certificate, index) => (
+              <div key={index} className="flex items-center space-x-4 p-3 border-l-4 border-blue-500 hover:bg-gray-800/50 transition-colors duration-300">
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white text-xl">{certificate.icon}</span>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-white font-semibold">{certificate.title}</h4>
+                  <p className="text-gray-300 text-sm">{certificate.issuer}</p>
+                  <p className="text-gray-400 text-xs">Issued: {certificate.issuedDate}</p>
+                </div>
+                <div className="flex-shrink-0">
+                  <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Verified</span>
+                </div>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">{certificate.title}</h3>
-              <p className="text-gray-600 text-sm mb-2">{certificate.issuer}</p>
-              <p className="text-gray-500 text-xs">Issued: {certificate.issuedDate}</p>
-              <div className="mt-4">
-                <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Verified</span>
-              </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
+        
+        {/* Right Side - Certificate Photos */}
+        <div className="flex-1">
+          <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certificate Images</h3>
+          <div className="grid grid-cols-2 gap-4">
+            {[1, 2, 3, 4].map((cert) => (
+              <div key={cert} className="relative group">
+                <div className="aspect-square rounded-lg border-2 border-blue-400 flex items-center justify-center bg-gray-800/50 hover:bg-gray-700/50 transition-colors duration-300 cursor-pointer">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-blue-500/20 rounded-full mx-auto mb-2 flex items-center justify-center">
+                      <span className="text-blue-400 text-2xl">📄</span>
+                    </div>
+                    <p className="text-gray-400 text-xs">Certificate {cert}</p>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-black/60 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <button className="bg-blue-500 hover:bg-blue-600 text-white text-xs px-3 py-1 rounded">
+                    View
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
