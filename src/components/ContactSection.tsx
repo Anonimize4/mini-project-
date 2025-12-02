@@ -40,7 +40,7 @@ const ContactSection = () => {
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
           <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Contact Information</h3>
-          <div className="bg-blue-800 rounded-lg p-6 shadow-lg">
+          <div className="rounded-lg p-6 shadow-lg" style={{ backgroundColor: '#38aecc' }}>
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center space-x-4">
@@ -59,7 +59,7 @@ const ContactSection = () => {
         
         <div className="flex-1">
           <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Send Message</h3>
-          <div className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400">
+          <div className="rounded-lg p-6 shadow-lg border-2 border-blue-400" style={{ backgroundColor: '#38aecc' }}>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>

@@ -24,7 +24,8 @@ const SkillsSection = () => {
         {skills.map((skill, index) => (
           <motion.div 
             key={index} 
-            className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300 text-center"
+            className="rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300 text-center"
+            style={{ backgroundColor: '#38aecc' }}
             whileHover={{ 
               scale: 1.1,
               rotate: [0, -5, 5, -5, 0],

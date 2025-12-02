@@ -44,7 +44,7 @@ const CertificatesSection = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {certificates.map((certificate, index) => (
-          <div key={index} className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-shadow duration-300">
+          <div key={index} className="rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-shadow duration-300" style={{ backgroundColor: '#38aecc' }}>
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-white text-2xl font-bold">{certificate.icon}</span>

@@ -15,7 +15,8 @@ const AboutSection = () => {
         >
           <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>whoami?</h3>
           <motion.div 
-            className="bg-blue-800 rounded-lg p-6 shadow-lg"
+            className="rounded-lg p-6 shadow-lg"
+            style={{ backgroundColor: '#38aecc' }}
             whileHover={{ scale: 1.02 }}
           >
             <p className="text-white leading-relaxed mb-4">
@@ -39,7 +40,8 @@ const AboutSection = () => {
         >
           <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>My Experience</h3>
           <motion.div 
-            className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400"
+            className="rounded-lg p-6 shadow-lg border-2 border-blue-400"
+            style={{ backgroundColor: '#38aecc' }}
             whileHover={{ scale: 1.02 }}
           >
             <motion.div className="space-y-4">

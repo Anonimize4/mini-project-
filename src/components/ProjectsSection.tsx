@@ -75,7 +75,8 @@ const ProjectsSection = () => {
         {projects.map((project, index) => (
           <motion.div 
             key={index} 
-            className="bg-white rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300"
+            className="rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300"
+            style={{ backgroundColor: '#38aecc' }}
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
