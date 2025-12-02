@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 
 const HomeSection = () => {
-  const rotatingText = "• Creative Developer • Problem Solver • Tech Enthusiast • ";
-  
   return (
     <section id="home" className="mb-12">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -19,7 +17,7 @@ const HomeSection = () => {
             className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300 mb-6 font-mono tracking-wide"
             style={{ backgroundImage: 'linear-gradient(to right, #39FF14, #32CD32)' }}
           >
-            {"<Welcome to Samuel's Portfolio/>"}
+            {"Hi,I'm SAMUEL BELAY"}
           </motion.h1>
           
           <motion.a 
@@ -35,7 +33,7 @@ const HomeSection = () => {
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 font-mono border border-emerald-400/30"
           >
-            [Download CV]
+            Download CV
           </motion.a>
         </motion.div>
         
@@ -68,21 +66,6 @@ const HomeSection = () => {
             />
           </div>
           
-          <motion.div 
-            className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap"
-            animate={{
-              x: ["-50%", "-150%"],
-            }}
-            transition={{
-              duration: 15,
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            <span className="text-emerald-300 text-sm font-medium bg-black/80 backdrop-blur-sm px-4 py-2 rounded-full border border-emerald-400/30 font-mono">
-              {rotatingText}
-            </span>
-          </motion.div>
         </motion.div>
       </div>
     </section>
