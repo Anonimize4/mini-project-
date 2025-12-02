@@ -3,7 +3,17 @@ import { motion } from 'framer-motion';
 const AboutSection = () => {
   return (
     <section id="about" className="mb-12">
-      <h2 className="text-3xl font-bold mb-8 text-center font-mono" style={{ color: '#39FF14' }}>About Me</h2>
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold font-mono inline-block relative" style={{ color: '#39FF14' }}>
+          About Me
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></div>
+        </h2>
+        <div className="flex justify-center mt-2">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <span key={star} className="text-yellow-400 text-lg">⭐</span>
+          ))}
+        </div>
+      </div>
       
       <div className="flex flex-col lg:flex-row gap-8 mb-8">
         <motion.div 

@@ -9,20 +9,7 @@ const ProjectsSection = () => {
       technologies: ["React", "Node.js", "MongoDB"],
       gradient: "from-blue-400 to-blue-600"
     },
-    {
-      icon: "🛍️",
-      title: "E-Commerce Platform",
-      description: "Full-featured online shopping platform with payment integration and inventory management.",
-      technologies: ["React", "Stripe", "Firebase"],
-      gradient: "from-green-400 to-green-600"
-    },
-    {
-      icon: "📱",
-      title: "Mobile App Design",
-      description: "Cross-platform mobile application with intuitive UI and seamless user experience.",
-      technologies: ["React Native", "Redux", "API"],
-      gradient: "from-purple-400 to-purple-600"
-    },
+   
     {
       icon: "📊",
       title: "Data Analytics Dashboard",
@@ -30,46 +17,37 @@ const ProjectsSection = () => {
       technologies: ["Vue.js", "D3.js", "Python"],
       gradient: "from-red-400 to-red-600"
     },
-    {
-      icon: "🤖",
-      title: "AI Chat Assistant",
-      description: "Intelligent chatbot powered by machine learning for customer support and automation.",
-      technologies: ["Python", "TensorFlow", "FastAPI"],
-      gradient: "from-yellow-400 to-yellow-600"
-    },
-    {
-      icon: "🎮",
-      title: "Gaming Platform",
-      description: "Multiplayer gaming platform with real-time gameplay and social features.",
-      technologies: ["WebSocket", "Canvas", "Node.js"],
-      gradient: "from-indigo-400 to-indigo-600"
-    }
+  
   ];
 
   const getTechColor = (tech: string) => {
     const colors: { [key: string]: string } = {
       "React": "bg-blue-100 text-blue-800",
       "Node.js": "bg-green-100 text-green-800",
-      "MongoDB": "bg-purple-100 text-purple-800",
-      "Stripe": "bg-yellow-100 text-yellow-800",
-      "Firebase": "bg-red-100 text-red-800",
+    
       "React Native": "bg-blue-100 text-blue-800",
-      "Redux": "bg-orange-100 text-orange-800",
-      "API": "bg-indigo-100 text-indigo-800",
+    
       "Vue.js": "bg-blue-100 text-blue-800",
-      "D3.js": "bg-green-100 text-green-800",
+    
       "Python": "bg-gray-100 text-gray-800",
-      "TensorFlow": "bg-purple-100 text-purple-800",
-      "FastAPI": "bg-green-100 text-green-800",
-      "WebSocket": "bg-blue-100 text-blue-800",
-      "Canvas": "bg-orange-100 text-orange-800"
+
     };
     return colors[tech] || "bg-gray-100 text-gray-800";
   };
 
   return (
     <section id="projects" className="mb-12">
-      <h2 className="text-3xl font-bold mb-8 text-center font-mono" style={{ color: '#39FF14' }}>My Projects</h2>
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold font-mono inline-block relative" style={{ color: '#39FF14' }}>
+          My Projects
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></div>
+        </h2>
+        <div className="flex justify-center mt-2">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <span key={star} className="text-yellow-400 text-lg">⭐</span>
+          ))}
+        </div>
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
@@ -88,7 +66,7 @@ const ProjectsSection = () => {
                 <div className="w-20 h-20 bg-blue-500/20 rounded-full mx-auto mb-3 flex items-center justify-center">
                   <span className="text-blue-400 text-3xl">🖼️</span>
                 </div>
-                <p className="text-gray-400 text-sm">Project Image</p>
+                <p className="text-gray-400 text-sm">Projects Demo</p>
               </div>
             </div>
             <h3 className="text-white font-bold text-lg mb-2">{project.title}</h3>
