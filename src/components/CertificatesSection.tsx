@@ -54,8 +54,8 @@ const CertificatesSection = () => {
                 </div>
                 <div className="flex-1">
                   <h4 className="text-white font-semibold">{certificate.title}</h4>
-                  <p className="text-gray-300 text-sm">{certificate.issuer}</p>
-                  <p className="text-gray-400 text-xs">Issued: {certificate.issuedDate}</p>
+                  <p className="text-white text-sm">{certificate.issuer}</p>
+                  <p className="text-white text-xs">Issued: {certificate.issuedDate}</p>
                 </div>
                 <div className="flex-shrink-0">
                   <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Verified</span>

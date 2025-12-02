@@ -60,9 +60,9 @@ const AboutSection = () => {
                 viewport={{ once: true }}
                 whileHover={{ x: 10 }}
               >
-                <h4 className="font-bold text-gray-800">{exp.title}</h4>
-                <p className="text-gray-600 text-sm">{exp.period}</p>
-                <p className="text-gray-700">{exp.description}</p>
+                  <h4 className="font-bold text-white">{exp.title}</h4>
+                  <p className="text-gray-300 text-sm">{exp.period}</p>
+                  <p className="text-gray-400">{exp.description}</p>
               </motion.div>
             ))}
           </motion.div>

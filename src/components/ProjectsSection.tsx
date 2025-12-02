@@ -95,7 +95,7 @@ const ProjectsSection = () => {
             <p className="text-gray-300 text-sm mb-3">{project.description}</p>
             <div className="flex flex-wrap gap-2 justify-center mb-4">
               {project.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">
+                <span key={techIndex} className="bg-gray-700 text-white text-xs px-2 py-1 rounded">
                   {tech}
                 </span>
               ))}

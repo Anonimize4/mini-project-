@@ -62,7 +62,7 @@ const ContactSection = () => {
           <div className="rounded-lg p-6 shadow-lg border-2 border-blue-500">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>
+                <label htmlFor="name" className="block text-white font-medium mb-2">Name</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -74,7 +74,7 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
+                <label htmlFor="email" className="block text-white font-medium mb-2">Email</label>
                 <input 
                   type="email" 
                   id="email" 
@@ -86,7 +86,7 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">Subject</label>
+                <label htmlFor="subject" className="block text-white font-medium mb-2">Subject</label>
                 <input 
                   type="text" 
                   id="subject" 
@@ -98,7 +98,7 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
+                <label htmlFor="message" className="block text-white font-medium mb-2">Message</label>
                 <textarea 
                   id="message" 
                   name="message" 
