@@ -75,38 +75,34 @@ const ProjectsSection = () => {
         {projects.map((project, index) => (
           <motion.div 
             key={index} 
-            className="rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300"
-            style={{ backgroundColor: '#38aecc' }}
+            className="text-center"
             whileHover={{ 
               scale: 1.05,
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
             }}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <div className="mb-4">
-              <div className="w-full h-40 rounded-lg overflow-hidden bg-gray-800/50 border-2 border-blue-400 flex items-center justify-center hover:bg-gray-700/50 transition-colors duration-300">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-500/20 rounded-full mx-auto mb-2 flex items-center justify-center">
-                    <span className="text-blue-400 text-2xl">🖼️</span>
-                  </div>
-                  <p className="text-gray-400 text-xs">Project Image</p>
+            <div className="w-full h-48 rounded-lg overflow-hidden bg-gray-800/50 border-2 border-blue-400 flex items-center justify-center hover:bg-gray-700/50 transition-colors duration-300 mb-4">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-blue-500/20 rounded-full mx-auto mb-3 flex items-center justify-center">
+                  <span className="text-blue-400 text-3xl">🖼️</span>
                 </div>
+                <p className="text-gray-400 text-sm">Project Image</p>
               </div>
             </div>
-            <h3 className="font-bold text-gray-800 mb-2">{project.title}</h3>
-            <p className="text-gray-600 text-sm mb-4">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <h3 className="text-white font-bold text-lg mb-2">{project.title}</h3>
+            <p className="text-gray-300 text-sm mb-3">{project.description}</p>
+            <div className="flex flex-wrap gap-2 justify-center mb-4">
               {project.technologies.map((tech, techIndex) => (
-                <span key={techIndex} className={`${getTechColor(tech)} text-xs px-2 py-1 rounded`}>
+                <span key={techIndex} className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">
                   {tech}
                 </span>
               ))}
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <motion.button 
-                className="text-blue-600 hover:text-blue-800 text-sm font-semibold"
+                className="text-blue-400 hover:text-blue-300 text-sm font-semibold"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -116,7 +112,7 @@ const ProjectsSection = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-800 text-sm font-semibold"
+                className="text-gray-400 hover:text-gray-300 text-sm font-semibold"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
