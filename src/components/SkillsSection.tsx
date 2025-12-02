@@ -20,12 +20,11 @@ const SkillsSection = () => {
     <section id="skills" className="mb-12">
       <h2 className="text-3xl font-bold mb-8 text-center font-mono" style={{ color: '#39FF14' }}>My Skills</h2>
       
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {skills.map((skill, index) => (
           <motion.div 
             key={index} 
-            className="rounded-lg p-6 shadow-lg border-2 border-blue-400 hover:shadow-xl transition-all duration-300 text-center"
-            style={{ backgroundColor: '#38aecc' }}
+            className="text-center"
             whileHover={{ 
               scale: 1.1,
               rotate: [0, -5, 5, -5, 0],
@@ -40,16 +39,16 @@ const SkillsSection = () => {
               stiffness: 100
             }}
           >
-            <div className={`w-12 h-12 ${skill.bgColor} rounded-full mx-auto mb-3 flex items-center justify-center`}>
-              <span className="text-white text-xl">{skill.icon}</span>
+            <div className={`w-16 h-16 ${skill.bgColor} rounded-full mx-auto mb-3 flex items-center justify-center`}>
+              <span className="text-white text-2xl">{skill.icon}</span>
             </div>
             <motion.h3 
-              className="font-bold text-gray-800 mb-1"
+              className="text-white font-bold mb-1"
               whileHover={{ scale: 1.2 }}
             >
               {skill.name}
             </motion.h3>
-            <p className="text-gray-600 text-xs">{skill.level}</p>
+            <p className="text-gray-400 text-sm">{skill.level}</p>
           </motion.div>
         ))}
       </div>
