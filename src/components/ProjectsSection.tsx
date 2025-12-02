@@ -86,8 +86,13 @@ const ProjectsSection = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="mb-4">
-              <div className={`w-full h-40 bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center`}>
-                <span className="text-white text-4xl font-bold">{project.icon}</span>
+              <div className="w-full h-40 rounded-lg overflow-hidden bg-gray-800/50 border-2 border-blue-400 flex items-center justify-center hover:bg-gray-700/50 transition-colors duration-300">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-500/20 rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-blue-400 text-2xl">🖼️</span>
+                  </div>
+                  <p className="text-gray-400 text-xs">Project Image</p>
+                </div>
               </div>
             </div>
             <h3 className="font-bold text-gray-800 mb-2">{project.title}</h3>
@@ -107,13 +112,16 @@ const ProjectsSection = () => {
               >
                 View Demo
               </motion.button>
-              <motion.button 
+              <motion.a 
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-800 text-sm font-semibold"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 GitHub
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         ))}
