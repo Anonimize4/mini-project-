@@ -7,8 +7,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="text-lg font-semibold mb-2">Samuel's Portfolio</h3>
-            <p className="text-gray-300 text-sm">Building amazing web experiences</p>
+            <p className="text-sm" style={{ color: '#39FF14', textShadow: '0 0 10px rgba(57, 255, 20, 0.8)' }}>Let's build secure digital Ethiopia</p>
           </div>
           
           <div className="flex space-x-6 mb-4 md:mb-0">
@@ -55,7 +54,7 @@ const Footer: React.FC = () => {
               }}
             />
             <p className="text-gray-400 text-sm">
-              © 2024 Samuel's Portfolio. All rights reserved.
+              © 2024 All rights reserved.
             </p>
           </div>
         </div>

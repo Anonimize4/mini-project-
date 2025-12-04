@@ -1,6 +1,45 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const HomeSection = () => {
+  const skills = [
+    'React', 'Node.js', 'TypeScript', 'JavaScript', 'Python',
+    'Network Security', 'Penetration Testing', 'Vulnerability Assessment',
+    'Incident Response', 'Security Monitoring'
+  ];
+
+  const [currentSkill, setCurrentSkill] = useState('');
+  const [skillIndex, setSkillIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const current = skills[skillIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+    const pauseTime = 2000;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setCurrentSkill(current.substring(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+
+        if (charIndex + 1 === current.length) {
+          setTimeout(() => setIsDeleting(true), pauseTime);
+        }
+      } else {
+        setCurrentSkill(current.substring(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+
+        if (charIndex - 1 === 0) {
+          setIsDeleting(false);
+          setSkillIndex((skillIndex + 1) % skills.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, skillIndex, skills]);
+
   return (
     <section id="home" className="mb-12">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
