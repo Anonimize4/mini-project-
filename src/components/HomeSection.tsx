@@ -49,7 +49,7 @@ const HomeSection = () => {
           transition={{ duration: 0.8 }}
           className="flex-1"
         >
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -58,8 +58,18 @@ const HomeSection = () => {
             <span className="text-white">{"Hi,I'm "}</span>
             <span style={{ color: '#39FF14' }}>{"SAMUEL BELAY"}</span>
           </motion.h1>
-          
-          <motion.a 
+
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl font-mono mb-6"
+            style={{ color: '#39FF14' }}
+          >
+            {currentSkill}<span className="animate-pulse">|</span>
+          </motion.p>
+
+          <motion.a
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
