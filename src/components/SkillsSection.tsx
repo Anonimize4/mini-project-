@@ -17,21 +17,50 @@ const SkillsSection = () => {
     { icon: "📊", name: "Security Monitoring", level: "Advanced", bgColor: "bg-teal-600" }
   ];
 
+  const getSkillLevel = (level: string) => {
+    const levels: { [key: string]: number } = {
+      "Expert": 95,
+      "Advanced": 80,
+      "Intermediate": 65,
+      "Beginner": 40
+    };
+    return levels[level] || 50;
+  };
+
   const SkillItem = ({ skill, index, delay = 0 }: { skill: any; index: number; delay?: number }) => (
     <motion.div 
       key={index} 
-      className="flex items-center space-x-4 p-3 border-l-4 border-blue-500 hover:bg-gray-800/50 transition-colors duration-300"
-      whileHover={{ x: 10 }}
+      className="p-4 cyber-border rounded-lg hover:bg-gray-800/30 transition-all duration-300 glow-effect"
+      whileHover={{ x: 10, scale: 1.02 }}
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.4, delay: delay + index * 0.1 }}
     >
-      <div className={`w-12 h-12 ${skill.bgColor} rounded-full flex items-center justify-center flex-shrink-0`}>
-        <span className="text-white text-xl">{skill.icon}</span>
+      <div className="flex items-center space-x-4 mb-3">
+        <div className={`w-12 h-12 ${skill.bgColor} rounded-full flex items-center justify-center flex-shrink-0 glow-effect`}>
+          <span className="text-white text-xl">{skill.icon}</span>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-white font-semibold text-lg">{skill.name}</h3>
+          <p className="text-gray-400 text-sm">{skill.level}</p>
+        </div>
       </div>
-      <div className="flex-1">
-        <h3 className="text-white font-semibold">{skill.name}</h3>
-        <p className="text-gray-400 text-sm">{skill.level}</p>
+      
+      {/* Progress bar */}
+      <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+        <motion.div 
+          className={`h-full ${skill.bgColor} rounded-full`}
+          initial={{ width: 0 }}
+          animate={{ width: `${getSkillLevel(skill.level)}%` }}
+          transition={{ duration: 1, delay: delay + index * 0.1 + 0.5 }}
+          style={{
+            boxShadow: '0 0 10px rgba(57, 255, 20, 0.5)'
+          }}
+        />
+      </div>
+      
+      <div className="mt-2 text-right">
+        <span className="text-xs text-gray-400 font-mono">{getSkillLevel(skill.level)}%</span>
       </div>
     </motion.div>
   );
