@@ -1,40 +1,34 @@
 const CertificatesSection = () => {
   const certificates = [
     {
-      icon: "🏆",
-      title: "React Developer Certification",
-      issuer: "Meta",
-      issuedDate: "March 2024"
+      icon: "☁️",
+      title: "Certified Cloud Security Professional (CCSP)",
+      issuer: "(ISC)²",
+      issuedDate: "2024"
     },
     {
-      icon: "📜",
-      title: "Full Stack Web Development",
-      issuer: "freeCodeCamp",
-      issuedDate: "January 2024"
+      icon: "🔐",
+      title: "Certified Cybersecurity (CC)",
+      issuer: "(ISC)²",
+      issuedDate: "2024"
     },
     {
-      icon: "🎯",
-      title: "AWS Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      issuedDate: "November 2023"
+      icon: "📱",
+      title: "Android and Programming Certificate",
+      issuer: "Five Million Coders",
+      issuedDate: "2024"
     },
     {
-      icon: "🔒",
-      title: "Web Security Specialist",
-      issuer: "OWASP",
-      issuedDate: "September 2023"
+      icon: "🛡️",
+      title: "Cyber Shield Showdown CTF 2025 Hacking Certificate",
+      issuer: "ALX Ethiopia",
+      issuedDate: "2025"
     },
     {
-      icon: "🗄️",
-      title: "Database Management",
-      issuer: "MongoDB University",
-      issuedDate: "July 2023"
-    },
-    {
-      icon: "⚡",
-      title: "Node.js Application Developer",
-      issuer: "OpenJS Foundation",
-      issuedDate: "May 2023"
+      icon: "💻",
+      title: "Coding Hackathon Certificate",
+      issuer: "BiTech with PAN",
+      issuedDate: "2024"
     }
   ];
 
