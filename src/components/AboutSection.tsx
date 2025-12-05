@@ -25,13 +25,20 @@ const AboutSection = () => {
         >
           <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>whoami?</h3>
           <p className="text-white leading-relaxed mb-4">
-            I am a passionate Full Stack Developer with expertise in modern web technologies. 
-            My journey in software development has equipped me with strong problem-solving skills 
-            and a deep understanding of creating efficient, scalable applications.
+            Hello! I'm Samuel Belay, a BSc in Cyber Security graduate from Bahirdar University. 
+            I'm a passionate tech person who is creative, collaborative, strong, and dedicated to achieving 
+            any given task successfully.
+          </p>
+          <p className="text-white leading-relaxed mb-4">
+            I have experience in penetration testing and coding as demonstrated in my skills section. 
+            I completed an internship at INSA lasting over two months, where I gained valuable experience 
+            sharing knowledge and engaging in real-world practical work. During my time there, I conducted 
+            penetration testing and secure coding practices that made me more confident in my abilities.
           </p>
           <p className="text-white leading-relaxed">
-            When I'm not coding, I enjoy exploring new technologies, contributing to open-source 
-            projects, and continuously expanding my skill set to stay current with industry trends.
+            I have also worked at the innovation team at Bahirdar University. I'm an experienced person 
+            with many certificates and recognitions, both online and in person, that validate my expertise 
+            and commitment to the field.
           </p>
         </motion.div>
         
@@ -46,19 +53,19 @@ const AboutSection = () => {
           <motion.div className="space-y-4">
             {[
               {
-                title: "Full Stack Developer",
-                period: "2022 - Present",
-                description: "Developing scalable web applications using React, Node.js, and modern cloud technologies"
+                title: "Cybersecurity Intern",
+                period: "INSA - 2+ Months",
+                description: "Conducted penetration testing and secure coding practices, gaining real-world practical experience"
               },
               {
-                title: "Software Engineer", 
-                period: "2020 - 2022",
-                description: "Built and maintained enterprise-level software solutions with focus on performance and security"
+                title: "Innovation Team Member", 
+                period: "Bahirdar University",
+                description: "Worked on innovative projects and collaborated with team members on cutting-edge solutions"
               },
               {
-                title: "Junior Developer",
-                period: "2019 - 2020", 
-                description: "Started professional journey learning best practices and contributing to various projects"
+                title: "Cybersecurity Professional",
+                period: "Present", 
+                description: "Applying penetration testing skills and secure coding practices in various projects"
               }
             ].map((exp, index) => (
               <motion.div 
