@@ -6,31 +6,38 @@ const CertificatesSection = () => {
       icon: "☁️",
       title: "Certified Cloud Security Professional (CCSP)",
       issuer: "(ISC)²",
-      issuedDate: "2025"
+      issuedDate: "2025",
+      image: "/certificates/ccsp.jpg"
     },
     {
       icon: "🔐",
       title: "Certified Cybersecurity (CC)",
       issuer: "(ISC)²",
-      issuedDate: "2025"
+      issuedDate: "2025",
+      image: "/certificates/cc.png"
     },
     {
       icon: "📱",
       title: "Android and Programming Certificate",
       issuer: "Five Million Coders",
-      issuedDate: "2025"
+      issuedDate: "2025",
+      image: "/certificates/programing.png",
+      pdf: "/certificates/android.pdf"
     },
     {
       icon: "🛡️",
       title: "Cyber Shield Showdown CTF 2025 Hacking Certificate",
       issuer: "ALX Ethiopia",
-      issuedDate: "2025"
+      issuedDate: "2025",
+      image: "/certificates/yekolo.png",
+      pdf: "/certificates/100-137-10.pdf"
     },
     {
       icon: "💻",
       title: "Coding Hackathon Certificate",
       issuer: "BiTech with PAN",
-      issuedDate: "2025"
+      issuedDate: "2025",
+      pdf: "/certificates/programming.pdf"
     }
   ];
 
@@ -102,8 +109,8 @@ const CertificatesSection = () => {
           <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certificate Images</h3>
           <div className="grid grid-cols-2 gap-4">
             {certificates.slice(0, 4).map((cert, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="relative group"
                 whileHover={{ scale: 1.05 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -111,17 +118,21 @@ const CertificatesSection = () => {
                 transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
               >
                 <div className="aspect-square cyber-border rounded-lg flex items-center justify-center bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 cursor-pointer glow-effect overflow-hidden">
-                  <div className="text-center relative z-10">
-                    <motion.div 
-                      className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mx-auto mb-2 flex items-center justify-center glow-effect"
-                      whileHover={{ scale: 1.1, rotate: 360 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <span className="text-white text-2xl">{cert.icon}</span>
-                    </motion.div>
-                    <p className="text-gray-300 text-xs font-mono font-semibold">{cert.title.split(' ')[0]}</p>
-                  </div>
-                  
+                  {cert.image ? (
+                    <img src={cert.image} alt={cert.title} className="w-full h-full object-cover rounded-lg" />
+                  ) : (
+                    <div className="text-center relative z-10">
+                      <motion.div
+                        className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mx-auto mb-2 flex items-center justify-center glow-effect"
+                        whileHover={{ scale: 1.1, rotate: 360 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <span className="text-white text-2xl">{cert.icon}</span>
+                      </motion.div>
+                      <p className="text-gray-300 text-xs font-mono font-semibold">{cert.title.split(' ')[0]}</p>
+                    </div>
+                  )}
+
                   {/* Background pattern */}
                   <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0" style={{
@@ -129,7 +140,7 @@ const CertificatesSection = () => {
                     }} />
                   </div>
                 </div>
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
