@@ -25,20 +25,20 @@ const ContactSection = () => {
     {
       icon: "📱",
       title: "Telegram",
-      value: "t.me/+2MB6c6QBCIk1N2Rk",
+      value: "Telegram",
       link: "https://t.me/+2MB6c6QBCIk1N2Rk"
     },
     {
       icon: "💬",
       title: "Discord",
-      value: "discord.com/channels/1440029472496550040/1440029473536872513",
+      value: "Discord",
       link: "https://discord.com/channels/1440029472496550040/1440029473536872513"
     },
     {
       icon: "🐙",
       title: "GitHub",
-      value: "github.com/samuelbelay",
-      link: "https://github.com/samuelbelay"
+      value: "Anonimize4",
+      link: "https://github.com/Anonimize4"
     }
   ];
 
