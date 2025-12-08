@@ -23,16 +23,16 @@ const ContactSection = () => {
       link: "tel:+2519XXXXXXXX"
     },
     {
-      icon: "📍",
-      title: "Location",
-      value: "Bahirdar, Ethiopia",
-      link: "#"
+      icon: "📱",
+      title: "Telegram",
+      value: "t.me/+2MB6c6QBCIk1N2Rk",
+      link: "https://t.me/+2MB6c6QBCIk1N2Rk"
     },
     {
-      icon: "💼",
-      title: "LinkedIn",
-      value: "linkedin.com/in/samuelbelay",
-      link: "https://linkedin.com/in/samuelbelay"
+      icon: "💬",
+      title: "Discord",
+      value: "discord.com/channels/1440029472496550040/1440029473536872513",
+      link: "https://discord.com/channels/1440029472496550040/1440029473536872513"
     },
     {
       icon: "🐙",
