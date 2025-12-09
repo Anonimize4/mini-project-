@@ -117,9 +117,9 @@ const CertificatesSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
               >
-                <div className="aspect-square cyber-border rounded-lg flex items-center justify-center bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 cursor-pointer glow-effect overflow-hidden">
+                <div className="aspect-[3/2] cyber-border rounded-lg flex items-center justify-center bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 cursor-pointer glow-effect overflow-hidden">
                   {cert.image ? (
-                    <img src={cert.image} alt={cert.title} className="w-full h-full object-cover rounded-lg" />
+                    <img src={cert.image} alt={cert.title} className="w-full h-full object-contain rounded-lg" />
                   ) : (
                     <div className="text-center relative z-10">
                       <motion.div
