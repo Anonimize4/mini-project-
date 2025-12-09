@@ -117,15 +117,16 @@ const HomeSection = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              href="#contact"
-              whileHover={{ 
+              href="/Samuel_Belay_CV.pdf"
+              download="Samuel_Belay_CV.pdf"
+              whileHover={{
                 scale: 1.05,
                 boxShadow: "0 0 30px rgba(0, 217, 255, 0.6)"
               }}
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg font-mono transition-all duration-300"
             >
-              📧 Get In Touch
+              📄 Download CV
             </motion.a>
           </div>
         </motion.div>
