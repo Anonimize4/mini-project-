@@ -13,14 +13,14 @@ const ContactSection = () => {
     {
       icon: "📧",
       title: "Email",
-      value: "samuel.belay@example.com",
-      link: "mailto:samuel.belay@example.com"
+      value: "samuelbelay81@gmail.com",
+      link: "mailto:samuelbelay81@gmail.com"
     },
     {
       icon: "📱",
       title: "Phone",
-      value: "+251 9XX XXX XXX",
-      link: "tel:+2519XXXXXXXX"
+      value: "+251 927 669 472",
+      link: "tel:+251927669472"
     },
     {
       icon: "📱",
