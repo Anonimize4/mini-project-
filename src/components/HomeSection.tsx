@@ -91,6 +91,10 @@ const HomeSection = () => {
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
               <span className="text-gray-300 text-sm font-mono">Available for Hire</span>
             </div>
+
+
+
+            
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
               <span className="text-gray-300 text-sm font-mono">Open to Opportunities</span>
