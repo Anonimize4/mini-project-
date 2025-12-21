@@ -27,7 +27,16 @@ const SkillsSection = () => {
     return levels[level] || 50;
   };
 
-  const SkillItem = ({ skill, index, delay = 0 }: { skill: any; index: number; delay?: number }) => (
+  const SkillItem = ({ skill, index, delay = 0 }: { 
+    skill: { 
+      icon: string; 
+      name: string; 
+      level: string; 
+      bgColor: string; 
+    }; 
+    index: number; 
+    delay?: number 
+  }) => (
     <motion.div 
       key={index} 
       className="p-4 cyber-border rounded-lg hover:bg-gray-800/30 transition-all duration-300 glow-effect"

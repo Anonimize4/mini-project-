@@ -12,7 +12,11 @@ const CyberBackground: React.FC = () => {
       size: Math.random() * 3 + 1,
       duration: Math.random() * 20 + 10
     }));
-    setParticles(newParticles);
+    
+    // Use requestAnimationFrame to avoid calling setState synchronously
+    requestAnimationFrame(() => {
+      setParticles(newParticles);
+    });
   }, []);
 
   return (

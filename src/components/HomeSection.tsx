@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 const HomeSection = () => {
-  const skills = [
+  const skills = useMemo(() => [
     'React', 'Node.js', 'TypeScript', 'JavaScript', 'Python',
     'Network Security', 'Penetration Testing', 'Vulnerability Assessment',
     'Incident Response', 'Security Monitoring'
-  ];
+  ], []);
 
   const [currentSkill, setCurrentSkill] = useState('');
   const [skillIndex, setSkillIndex] = useState(0);
