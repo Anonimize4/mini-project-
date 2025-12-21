@@ -47,21 +47,6 @@ const ProjectsSection = () => {
     }
   ];
 
-  const getTechColor = (tech: string) => {
-    const colors: { [key: string]: string } = {
-      "React": "bg-blue-100 text-blue-800",
-      "Node.js": "bg-green-100 text-green-800",
-    
-      "React Native": "bg-blue-100 text-blue-800",
-    
-      "Vue.js": "bg-blue-100 text-blue-800",
-    
-      "Python": "bg-gray-100 text-gray-800",
-
-    };
-    return colors[tech] || "bg-gray-100 text-gray-800";
-  };
-
   return (
     <section id="projects" className="mb-12">
       <div className="text-center mb-8">
