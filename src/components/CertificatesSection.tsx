@@ -43,25 +43,25 @@ const CertificatesSection = () => {
 
   return (
     <section id="certificates" className="mb-12">
-      <div className="text-center mb-8">
+      <header className="text-center mb-8">
         <h2 className="text-3xl font-bold font-mono inline-block relative" style={{ color: '#39FF14' }}>
           Certificates
-          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></div>
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></span>
         </h2>
         <div className="flex justify-center mt-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <span key={star} className="text-yellow-400 text-lg">⭐</span>
           ))}
         </div>
-      </div>
+      </header>
       
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Left Side - Certificate List */}
-        <div className="flex-1">
+        <section className="flex-1">
           <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certifications</h3>
-          <div className="space-y-4">
+          <ul className="space-y-4">
             {certificates.map((certificate, index) => (
-              <motion.div 
+              <motion.li 
                 key={index} 
                 className="cyber-border rounded-lg p-4 hover:bg-gray-800/30 transition-all duration-300 glow-effect"
                 whileHover={{ x: 10, scale: 1.02 }}
@@ -69,7 +69,7 @@ const CertificatesSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
               >
-                <div className="flex items-center space-x-4">
+                <article className="flex items-center space-x-4">
                   <motion.div 
                     className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 glow-effect"
                     whileHover={{ scale: 1.1, rotate: 360 }}
@@ -98,18 +98,18 @@ const CertificatesSection = () => {
                       ✓ Verified
                     </motion.span>
                   </div>
-                </div>
-              </motion.div>
+                </article>
+              </motion.li>
             ))}
-          </div>
-        </div>
+          </ul>
+        </section>
         
         {/* Right Side - Certificate Photos */}
-        <div className="flex-1">
+        <section className="flex-1">
           <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certificate Images</h3>
-          <div className="grid grid-cols-2 gap-4">
+          <ul className="grid grid-cols-2 gap-4">
             {certificates.slice(0, 4).map((cert, index) => (
-              <motion.div
+              <motion.li
                 key={index}
                 className="relative group"
                 whileHover={{ scale: 1.05 }}
@@ -117,7 +117,7 @@ const CertificatesSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
               >
-                <div className="aspect-[3/2] cyber-border rounded-lg flex items-center justify-center bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 cursor-pointer glow-effect overflow-hidden">
+                <figure className="aspect-[3/2] cyber-border rounded-lg flex items-center justify-center bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 cursor-pointer glow-effect overflow-hidden">
                   {cert.image ? (
                     <img src={cert.image} alt={cert.title} className="w-full h-full object-contain rounded-lg" />
                   ) : (
@@ -134,12 +134,12 @@ const CertificatesSection = () => {
                   )}
 
                   {/* Background pattern */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0" style={{
+                  <span className="absolute inset-0 opacity-10">
+                    <span className="absolute inset-0" style={{
                       backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(57, 255, 20, 0.3) 10px, rgba(57, 255, 20, 0.3) 20px)',
                     }} />
-                  </div>
-                </div>
+                  </span>
+                </figure>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4"
                   initial={{ opacity: 0 }}
@@ -149,10 +149,10 @@ const CertificatesSection = () => {
                     👁️ View Certificate
                   </button>
                 </motion.div>
-              </motion.div>
+              </motion.li>
             ))}
-          </div>
-        </div>
+          </ul>
+        </section>
       </div>
     </section>
   );
