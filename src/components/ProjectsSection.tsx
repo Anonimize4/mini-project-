@@ -85,7 +85,7 @@ const ProjectsSection = () => {
               </motion.div>
             )}
 
-            <div className="cyber-border rounded-lg overflow-hidden bg-gray-800/50 glow-effect h-full">
+            <div className="rounded-lg overflow-hidden bg-gray-800/50 h-full">
               {/* Project header with gradient background */}
               <div className={`h-32 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/20"></div>
