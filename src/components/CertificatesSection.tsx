@@ -46,16 +46,16 @@ const CertificatesSection = () => {
       <header className="text-center mb-8">
         <h2 className="text-3xl font-bold font-mono inline-block relative" style={{ color: '#39FF14' }}>
           Certificates
-          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></span>
+          <i className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></i>
         </h2>
-        <div className="flex justify-center mt-2">
+        <main className="flex justify-center mt-2">
           {[1, 2, 3, 4, 5].map((star) => (
-            <span key={star} className="text-yellow-400 text-lg">⭐</span>
+            <i key={star} className="text-yellow-400 text-lg">⭐</i>
           ))}
-        </div>
+        </main>
       </header>
       
-      <div className="flex flex-col lg:flex-row gap-8">
+      <main className="flex flex-col lg:flex-row gap-8">
         {/* Left Side - Certificate List */}
         <section className="flex-1">
           <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certifications</h3>
@@ -70,34 +70,34 @@ const CertificatesSection = () => {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
               >
                 <article className="flex items-center space-x-4">
-                  <motion.div 
-                    className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 glow-effect"
+                  <motion.i 
+                    className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 glow-effect text-white text-2xl"
                     whileHover={{ scale: 1.1, rotate: 360 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <span className="text-white text-2xl">{certificate.icon}</span>
-                  </motion.div>
-                  <div className="flex-1">
+                    {certificate.icon}
+                  </motion.i>
+                  <section className="flex-1">
                     <h4 className="text-white font-semibold text-lg mb-1">{certificate.title}</h4>
                     <p className="text-cyan-400 text-sm font-mono mb-1">{certificate.issuer}</p>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-gray-400 text-xs font-mono">Issued: {certificate.issuedDate}</span>
-                      <motion.div
+                    <footer className="flex items-center space-x-2">
+                      <time className="text-gray-400 text-xs font-mono">Issued: {certificate.issuedDate}</time>
+                      <motion.b
                         className="w-2 h-2 bg-green-400 rounded-full"
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
                       />
-                      <span className="text-green-400 text-xs font-mono">Active</span>
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <motion.span 
+                      <strong className="text-green-400 text-xs font-mono">Active</strong>
+                    </footer>
+                  </section>
+                  <aside className="flex-shrink-0">
+                    <motion.em 
                       className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs px-3 py-1 rounded-full font-mono"
                       whileHover={{ scale: 1.1 }}
                     >
                       ✓ Verified
-                    </motion.span>
-                  </div>
+                    </motion.em>
+                  </aside>
                 </article>
               </motion.li>
             ))}
@@ -121,26 +121,26 @@ const CertificatesSection = () => {
                   {cert.image ? (
                     <img src={cert.image} alt={cert.title} className="w-full h-full object-contain rounded-lg" />
                   ) : (
-                    <div className="text-center relative z-10">
-                      <motion.div
-                        className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mx-auto mb-2 flex items-center justify-center glow-effect"
+                    <section className="text-center relative z-10">
+                      <motion.i
+                        className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mx-auto mb-2 flex items-center justify-center glow-effect text-white text-2xl"
                         whileHover={{ scale: 1.1, rotate: 360 }}
                         transition={{ duration: 0.5 }}
                       >
-                        <span className="text-white text-2xl">{cert.icon}</span>
-                      </motion.div>
+                        {cert.icon}
+                      </motion.i>
                       <p className="text-gray-300 text-xs font-mono font-semibold">{cert.title.split(' ')[0]}</p>
-                    </div>
+                    </section>
                   )}
 
                   {/* Background pattern */}
-                  <span className="absolute inset-0 opacity-10">
-                    <span className="absolute inset-0" style={{
+                  <i className="absolute inset-0 opacity-10">
+                    <i className="absolute inset-0" style={{
                       backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(57, 255, 20, 0.3) 10px, rgba(57, 255, 20, 0.3) 20px)',
                     }} />
-                  </span>
+                  </i>
                 </figure>
-                <motion.div
+                <motion.nav
                   className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
@@ -148,12 +148,12 @@ const CertificatesSection = () => {
                   <button className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white text-xs px-4 py-2 rounded-lg font-mono glow-effect">
                     👁️ View Certificate
                   </button>
-                </motion.div>
+                </motion.nav>
               </motion.li>
             ))}
           </ul>
         </section>
-      </div>
+      </main>
     </section>
   );
 };
