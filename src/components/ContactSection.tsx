@@ -49,7 +49,7 @@ const ContactSection = () => {
       </header>
       
       <main className="max-w-4xl mx-auto">
-        <section className="cyber-border rounded-lg p-6 glow-effect bg-gray-800/50">
+        <div className="p-6">
           <h3 className="text-2xl font-semibold mb-6 font-mono gradient-text">Contact Information</h3>
           <ul className="space-y-4">
             {contactInfo.map((info, index) => (
@@ -71,10 +71,10 @@ const ContactSection = () => {
                   >
                     {info.icon}
                   </motion.i>
-                  <section className="flex-1">
+                  <div className="flex-1">
                     <h4 className="text-white font-semibold text-lg">{info.title}</h4>
                     <p className="text-cyan-400 text-sm font-mono">{info.value}</p>
-                  </section>
+                  </div>
                   <motion.i
                     className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-300"
                     whileHover={{ scale: 1.2 }}
@@ -85,7 +85,7 @@ const ContactSection = () => {
               </motion.li>
             ))}
           </ul>
-        </section>
+        </div>
       </main>
     </section>
   );
