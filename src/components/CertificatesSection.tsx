@@ -63,7 +63,7 @@ const CertificatesSection = () => {
             {certificates.map((certificate, index) => (
               <motion.li 
                 key={index} 
-                className="cyber-border rounded-lg p-4 hover:bg-gray-800/30 transition-all duration-300 glow-effect"
+                className="rounded-lg p-4 hover:bg-gray-800/30 transition-all duration-300"
                 whileHover={{ x: 10, scale: 1.02 }}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
