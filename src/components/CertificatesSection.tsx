@@ -44,13 +44,13 @@ const CertificatesSection = () => {
   return (
     <section id="certificates" className="mb-12">
       <header className="text-center mb-8">
-        <h2 className="text-3xl font-bold font-mono inline-block relative" style={{ color: '#39FF14' }}>
+        <h2 className="text-4xl font-bold font-mono inline-block relative" style={{ color: '#39FF14' }}>
           Certificates
           <i className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></i>
         </h2>
         <main className="flex justify-center mt-2">
           {[1, 2, 3, 4, 5].map((star) => (
-            <i key={star} className="text-yellow-400 text-lg">⭐</i>
+            <i key={star} className="text-yellow-400 text-xl">⭐</i>
           ))}
         </main>
       </header>
@@ -58,7 +58,7 @@ const CertificatesSection = () => {
       <main className="flex flex-col lg:flex-row gap-8">
         {/* Left Side - Certificate List */}
         <section className="flex-1">
-          <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certifications</h3>
+          <h3 className="text-3xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certifications</h3>
           <ul className="space-y-4">
             {certificates.map((certificate, index) => (
               <motion.li 
@@ -71,28 +71,24 @@ const CertificatesSection = () => {
               >
                 <article className="flex items-center space-x-4">
                   <motion.i 
-                    className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 glow-effect text-white text-2xl"
+                    className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 text-white text-3xl"
                     whileHover={{ scale: 1.1, rotate: 360 }}
                     transition={{ duration: 0.5 }}
                   >
                     {certificate.icon}
                   </motion.i>
                   <section className="flex-1">
-                    <h4 className="text-white font-semibold text-lg mb-1">{certificate.title}</h4>
-                    <p className="text-cyan-400 text-sm font-mono mb-1">{certificate.issuer}</p>
+                    <h4 className="text-white font-semibold text-xl mb-1">{certificate.title}</h4>
+                    <p className="text-cyan-400 text-base font-mono mb-1">{certificate.issuer}</p>
                     <footer className="flex items-center space-x-2">
-                      <time className="text-gray-400 text-xs font-mono">Issued: {certificate.issuedDate}</time>
-                      <motion.b
-                        className="w-2 h-2 bg-green-400 rounded-full"
-                        animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      />
-                      <strong className="text-green-400 text-xs font-mono">Active</strong>
+                      <time className="text-gray-400 text-sm font-mono">Issued: {certificate.issuedDate}</time>
+                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <strong className="text-green-400 text-sm font-mono">Active</strong>
                     </footer>
                   </section>
                   <aside className="flex-shrink-0">
                     <motion.em 
-                      className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs px-3 py-1 rounded-full font-mono"
+                      className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm px-4 py-2 rounded-full font-mono"
                       whileHover={{ scale: 1.1 }}
                     >
                       ✓ Verified
@@ -106,7 +102,7 @@ const CertificatesSection = () => {
         
         {/* Right Side - Certificate Photos */}
         <section className="flex-1">
-          <h3 className="text-2xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certificate Images</h3>
+          <h3 className="text-3xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Certificate Images</h3>
           <ul className="grid grid-cols-2 gap-4">
             {certificates.slice(0, 4).map((cert, index) => (
               <motion.li
@@ -117,19 +113,19 @@ const CertificatesSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
               >
-                <figure className="aspect-[3/2] cyber-border rounded-lg flex items-center justify-center bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 cursor-pointer glow-effect overflow-hidden">
+                <figure className="aspect-[3/2] rounded-lg flex items-center justify-center bg-gray-800/50 hover:bg-gray-700/50 transition-all duration-300 cursor-pointer overflow-hidden border border-emerald-500/30">
                   {cert.image ? (
                     <img src={cert.image} alt={cert.title} className="w-full h-full object-contain rounded-lg" />
                   ) : (
                     <section className="text-center relative z-10">
                       <motion.i
-                        className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mx-auto mb-2 flex items-center justify-center glow-effect text-white text-2xl"
+                        className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mx-auto mb-2 flex items-center justify-center text-white text-3xl"
                         whileHover={{ scale: 1.1, rotate: 360 }}
                         transition={{ duration: 0.5 }}
                       >
                         {cert.icon}
                       </motion.i>
-                      <p className="text-gray-300 text-xs font-mono font-semibold">{cert.title.split(' ')[0]}</p>
+                      <p className="text-gray-300 text-sm font-mono font-semibold">{cert.title.split(' ')[0]}</p>
                     </section>
                   )}
 
@@ -145,7 +141,7 @@ const CertificatesSection = () => {
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                 >
-                  <button className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white text-xs px-4 py-2 rounded-lg font-mono glow-effect">
+                  <button className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white text-sm px-4 py-2 rounded-lg font-mono">
                     👁️ View Certificate
                   </button>
                 </motion.section>

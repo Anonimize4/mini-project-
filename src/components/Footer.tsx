@@ -35,13 +35,12 @@ const Footer: React.FC = () => {
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
     { href: "#certificates", label: "Certificates" },
     { href: "#contact", label: "Contact" }
   ];
 
   return (
-    <footer className="cyber-border-t bg-gray-900/90 backdrop-blur-lg text-white py-12 mt-auto">
+    <footer className="border-t border-emerald-500/30 bg-gray-900/90 backdrop-blur-lg text-white py-12 mt-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand & Mission */}
@@ -51,25 +50,14 @@ const Footer: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-xl font-bold gradient-text font-mono mb-4">SAMUEL BELAY</h3>
-            <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+            <h3 className="text-2xl font-bold gradient-text font-mono mb-4">SAMUEL BELAY</h3>
+            <p className="text-gray-300 text-base mb-4 leading-relaxed">
               Building secure digital solutions for a safer Ethiopia. 
               Passionate about cybersecurity and innovative technology.
             </p>
             <div className="flex items-center justify-center md:justify-start space-x-2">
-              <motion.div
-                className="w-3 h-3 bg-green-400 rounded-full"
-                animate={{
-                  opacity: [1, 0.3, 1],
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-              <span className="text-green-400 text-sm font-mono">Available for Hire</span>
+              <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+              <span className="text-green-400 text-base font-mono">Available for Hire</span>
             </div>
           </motion.div>
           
@@ -80,13 +68,13 @@ const Footer: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="text-lg font-semibold gradient-text font-mono mb-4">Quick Links</h4>
-            <div className="grid grid-cols-2 gap-2">
+            <h4 className="text-xl font-semibold gradient-text font-mono mb-4">Quick Links</h4>
+            <div className="grid grid-cols-2 gap-3">
               {quickLinks.map((link, index) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm font-mono py-1"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-base font-mono py-1"
                   whileHover={{ x: 5 }}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -105,7 +93,7 @@ const Footer: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="text-lg font-semibold gradient-text font-mono mb-4">Connect</h4>
+            <h4 className="text-xl font-semibold gradient-text font-mono mb-4">Connect</h4>
             <div className="flex space-x-4 justify-center md:justify-end mb-4">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -113,7 +101,7 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-700/50 rounded-full flex items-center justify-center cyber-border glow-effect hover:bg-gray-600/50 transition-all duration-300"
+                  className="w-12 h-12 bg-gray-700/50 rounded-full flex items-center justify-center border border-emerald-500/30 hover:bg-gray-600/50 transition-all duration-300"
                   whileHover={{ scale: 1.1, rotate: 360 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, scale: 0 }}
@@ -126,7 +114,7 @@ const Footer: React.FC = () => {
                 </motion.a>
               ))}
             </div>
-            <p className="text-gray-400 text-xs font-mono">Let's collaborate!</p>
+            <p className="text-gray-400 text-sm font-mono">Let's collaborate!</p>
           </motion.div>
         </div>
         
@@ -138,19 +126,8 @@ const Footer: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <div className="flex items-center justify-center space-x-2">
-            <motion.div
-              className="w-2 h-2 bg-green-400 rounded-full"
-              animate={{
-                opacity: [1, 0.3, 1],
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-            <p className="text-gray-400 text-sm font-mono">
+            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+            <p className="text-gray-400 text-base font-mono">
               © 2024 Samuel Belay. All rights reserved.
             </p>
           </div>

@@ -54,7 +54,7 @@ const HomeSection = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold mb-6 font-mono tracking-wide"
+            className="text-5xl md:text-7xl font-bold mb-6 font-mono tracking-wide"
           >
             <span className="text-white">{"Hi, I'm "}</span>
             <span className="gradient-text">{"SAMUEL BELAY"}</span>
@@ -66,7 +66,7 @@ const HomeSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mb-6"
           >
-            <span className="text-xl md:text-2xl text-cyan-400 font-mono">Cybersecurity Professional & Technical Researcher</span>
+            <span className="text-2xl md:text-3xl text-cyan-400 font-mono">Cybersecurity Professional & Technical Researcher</span>
             <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-green-400 mt-2 rounded-full"></div>
           </motion.div>
 
@@ -76,8 +76,8 @@ const HomeSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-8"
           >
-            <p className="text-lg md:text-xl text-gray-300 font-mono mb-2">Specializing in:</p>
-            <p className="text-xl md:text-2xl font-mono gradient-text">
+            <p className="text-xl md:text-2xl text-gray-300 font-mono mb-2">Specializing in:</p>
+            <p className="text-2xl md:text-3xl font-mono gradient-text">
               {currentSkill}<span className="">|</span>
             </p>
           </motion.div>
@@ -90,15 +90,11 @@ const HomeSection = () => {
           >
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-              <span className="text-gray-300 text-sm font-mono">Available for Hire</span>
+              <span className="text-gray-300 text-base font-mono">Available for Hire</span>
             </div>
-
-
-
-            
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-              <span className="text-gray-300 text-sm font-mono">Open to Opportunities</span>
+              <span className="text-gray-300 text-base font-mono">Open to Opportunities</span>
             </div>
           </motion.div>
 
