@@ -14,20 +14,20 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="backdrop-blur-lg border-b border-emerald-500/30 w-full h-16 flex items-center justify-between px-4 fixed top-0 left-0 right-0 z-50 shadow-xl shadow-emerald-500/20 bg-gray-900/90">
+    <header className="backdrop-blur-lg border-b border-emerald-500/30 w-full h-24 flex items-center justify-between px-6 fixed top-0 left-0 right-0 z-50 shadow-xl shadow-emerald-500/20 bg-gray-900/90">
      
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-xl font-bold tracking-wider font-mono gradient-text cursor-pointer"
+        className="text-2xl font-bold tracking-wider gradient-text cursor-pointer"
         whileHover={{ scale: 1.05 }}
       >
         {"SAMUEL BELAY"}
       </motion.div>
       
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex space-x-6">
+      <nav className="hidden md:flex space-x-8">
         {navItems.map((item, index) => (
           <motion.a
             key={item.href}
@@ -41,8 +41,8 @@ const Header: React.FC = () => {
               textShadow: '0 0 10px rgba(16, 185, 129, 0.8)'
             }}
             whileTap={{ scale: 0.95 }}
-            className="hover:text-emerald-400 transition-all duration-300 font-mono text-sm relative group"
-            style={{ color: '#39FF14' }}
+            className="hover:text-emerald-400 transition-all duration-300 text-lg relative group"
+            style={{ color: '#ffffff' }}
           >
             {item.label}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
@@ -52,11 +52,11 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Button */}
       <motion.button
-        className="md:hidden text-2xl cyber-border p-2 rounded-lg glow-effect"
+        className="md:hidden text-3xl p-2"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        style={{ color: '#39FF14' }}
+        style={{ color: '#ffffff' }}
       >
         {isMobileMenuOpen ? '✕' : '☰'}
       </motion.button>
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-16 left-0 right-0 bg-gray-900/95 backdrop-blur-lg border-b border-emerald-500/30 md:hidden"
+          className="absolute top-24 left-0 right-0 bg-gray-900/95 backdrop-blur-lg border-b border-emerald-500/30 md:hidden"
         >
           <nav className="flex flex-col p-4 space-y-2">
             {navItems.map((item, index) => (

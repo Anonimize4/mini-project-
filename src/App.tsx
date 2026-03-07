@@ -9,7 +9,7 @@ import CyberBackground from './components/CyberBackground';
 
 function App() {
   return (
-      <div className="pt-16 min-h-screen bg-cosmos flex flex-col relative">
+    <div className="pt-24 min-h-screen bg-cosmos flex flex-col relative">
       <CyberBackground />
       <div className="relative z-10">
         <Header />
