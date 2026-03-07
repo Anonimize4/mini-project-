@@ -63,7 +63,7 @@ const AboutSection = () => {
                 description: "Worked on innovative projects and collaborated with team members on cutting-edge solutions"
               },
               {
-                title: "Cybersecurity Professional",
+                title: "Cybersecurity Professional & Technical Researcher",
                 period: "Present", 
                 description: "Applying penetration testing skills and secure coding practices in various projects"
               }
