@@ -3,7 +3,6 @@ import Footer from './components/Footer';
 import HomeSection from './components/HomeSection';
 import AboutSection from './components/AboutSection';
 import CertificatesSection from './components/CertificatesSection';
-import SkillsSection from './components/SkillsSection';
 import ContactSection from './components/ContactSection';
 import CyberBackground from './components/CyberBackground';
 
@@ -17,7 +16,6 @@ function App() {
           <HomeSection />
           <AboutSection />
           <CertificatesSection />
-          <SkillsSection />
           <ContactSection />
         </main>
         <Footer />
