@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect, useMemo } from 'react';
+import profileImage from '../assets/photo.jpg';
 
 const HomeSection = () => {
   const skills = useMemo(() => [
@@ -155,7 +156,7 @@ const HomeSection = () => {
               }}
             />
             <motion.img 
-              src="/src/assets/photo.jpg" 
+              src={profileImage}
               alt="Samuel Belay" 
               className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover cyber-border glow-effect"
               style={{ animation: 'float 6s ease-in-out infinite' }}
