@@ -78,7 +78,7 @@ const HomeSection = () => {
           >
             <p className="text-lg md:text-xl text-gray-300 font-mono mb-2">Specializing in:</p>
             <p className="text-xl md:text-2xl font-mono gradient-text">
-              {currentSkill}<span className="animate-pulse">|</span>
+              {currentSkill}<span className="">|</span>
             </p>
           </motion.div>
 
@@ -89,7 +89,7 @@ const HomeSection = () => {
             className="flex flex-wrap gap-4 mb-8"
           >
             <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <div className="w-3 h-3 bg-green-400 rounded-full"></div>
               <span className="text-gray-300 text-sm font-mono">Available for Hire</span>
             </div>
 
@@ -143,43 +143,29 @@ const HomeSection = () => {
           className="flex-shrink-0 relative"
         >
           <div className="relative">
-            <motion.div
+            <div
               className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full blur-xl opacity-50"
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.5, 0.7, 0.5],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
             />
             <motion.img 
               src={profileImage}
               alt="Samuel Belay" 
               className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover cyber-border glow-effect"
-              style={{ animation: 'float 6s ease-in-out infinite' }}
               onError={(e) => {
                 e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMUYyOTNCIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSIzMCIgZmlsbD0iI0Y5RkFGQiIvPgo8cGF0aCBkPSJNNDAgMTYwQzQwIDE0MCA2MCA5MCAxMDAgOTBTMTYwIDE0MCAxNjAgMTYwVjIwMEg0MFYxNjBaIiBmaWxsPSIjRjlGQUZCIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRjlGQUZCIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiPlNBTUVFTCwgU0FNVUVMPC90ZXh0Pgo8L3N2Zz4K';
               }}
             />
 
             {/* Floating badges */}
-            <motion.div
+            <div
               className="absolute -top-4 -right-4 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-mono"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
             >
               CCSP
-            </motion.div>
-            <motion.div
+            </div>
+            <div
               className="absolute -bottom-4 -left-4 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-mono"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 2, repeat: Infinity, delay: 1 }}
             >
               CYBERSECURITY
-            </motion.div>
+            </div>
           </div>
         </motion.div>
       </div>
