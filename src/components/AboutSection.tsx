@@ -41,49 +41,6 @@ const AboutSection = () => {
             and commitment to the field.
           </p>
         </motion.div>
-        
-        <motion.div 
-          className="flex-1"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>My Experience</h3>
-          <motion.div className="space-y-4">
-            {[
-              {
-                title: "Cybersecurity Intern",
-                period: "INSA - 2+ Months",
-                description: "Conducted penetration testing and secure coding practices, gaining real-world practical experience"
-              },
-              {
-                title: "Innovation Team Member", 
-                period: "Bahirdar University",
-                description: "Worked on innovative projects and collaborated with team members on cutting-edge solutions"
-              },
-              {
-                title: "Cybersecurity Professional & Technical Researcher",
-                period: "Present", 
-                description: "Applying penetration testing skills and secure coding practices in various projects"
-              }
-            ].map((exp, index) => (
-              <motion.div 
-                key={index}
-                className="border-l-4 border-blue-500 pl-4"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ x: 10 }}
-              >
-                  <h4 className="font-bold text-white text-lg">{exp.title}</h4>
-                  <p className="text-gray-300 text-base">{exp.period}</p>
-                  <p className="text-gray-400 text-base">{exp.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
       </div>
 
       {/* This section was removed: Community Participation */}
