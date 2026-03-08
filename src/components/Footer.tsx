@@ -40,8 +40,14 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="border-t border-emerald-500/30 bg-gray-900/90 backdrop-blur-lg text-white py-12 mt-auto">
-      <div className="container mx-auto px-4">
+    <footer className="border-t border-emerald-500/30 bg-gray-900/90 backdrop-blur-lg text-white py-12 mt-auto relative">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/digital.png)' }}
+      ></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand & Mission */}
           <motion.div 
