@@ -60,6 +60,9 @@ const AboutSection = () => {
           <p className="text-white text-lg leading-relaxed mt-4">
             I adhere to governance, risk management and compliance and local rules.
           </p>
+          <p className="text-white text-lg leading-relaxed mt-4">
+            I am mentor more than 250+ cyber security enthusiasts.
+          </p>
         </motion.div>
         
         {/* Right Side - Community Participation */}
