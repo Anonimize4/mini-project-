@@ -76,7 +76,6 @@ const HomeSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-8"
           >
-            <p className="text-xl md:text-2xl text-gray-300 font-mono mb-2">Specializing in:</p>
             <p className="text-2xl md:text-3xl font-mono gradient-text">
               {currentSkill}<span className="">|</span>
             </p>
