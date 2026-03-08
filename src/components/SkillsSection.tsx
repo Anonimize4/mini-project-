@@ -2,9 +2,7 @@ import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
   const programmingSkills = [
-    { icon: "📝", name: "TypeScript", level: "Advanced", bgColor: "bg-yellow-500" },
-    { icon: "⚡", name: "JavaScript", level: "Expert", bgColor: "bg-pink-500" },
-    { icon: "🐍", name: "Python", level: "Advanced", bgColor: "bg-blue-600" }
+    { icon: "⚡", name: "JavaScript", level: "Expert", bgColor: "bg-pink-500" }
   ];
 
   const cybersecuritySkills = [
@@ -12,7 +10,10 @@ const SkillsSection = () => {
     { icon: "🛡️", name: "Penetration Testing", level: "Intermediate", bgColor: "bg-red-600" },
     { icon: "🔍", name: "Vulnerability Assessment", level: "Advanced", bgColor: "bg-orange-600" },
     { icon: "🚨", name: "Incident Response", level: "Intermediate", bgColor: "bg-yellow-600" },
-    { icon: "📊", name: "Security Monitoring", level: "Advanced", bgColor: "bg-teal-600" }
+    { icon: "📊", name: "Security Monitoring", level: "Advanced", bgColor: "bg-teal-600" },
+    { icon: "🎣", name: "Phishing", level: "Advanced", bgColor: "bg-purple-500" },
+    { icon: "⚔️", name: "Offensive Security", level: "Advanced", bgColor: "bg-red-700" },
+    { icon: "🛡️", name: "Defensive Security", level: "Advanced", bgColor: "bg-green-600" }
   ];
 
   const getSkillLevel = (level: string) => {
