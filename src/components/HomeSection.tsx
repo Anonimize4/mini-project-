@@ -4,9 +4,8 @@ import profileImage from '../assets/photo.jpg';
 
 const HomeSection = () => {
   const skills = useMemo(() => [
-    'React', 'Node.js', 'TypeScript', 'JavaScript', 'Python',
     'Network Security', 'Penetration Testing', 'Vulnerability Assessment',
-    'Incident Response', 'Security Monitoring'
+    'Incident Response', 'Security Monitoring', 'Offensive Security', 'Security Automation', 'Defensive Security'
   ], []);
 
   const [currentSkill, setCurrentSkill] = useState('');
