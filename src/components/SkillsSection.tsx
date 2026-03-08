@@ -2,8 +2,6 @@ import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
   const programmingSkills = [
-    { icon: "⚛️", name: "React", level: "Advanced", bgColor: "bg-blue-500" },
-    { icon: "🟢", name: "Node.js", level: "Advanced", bgColor: "bg-green-500" },
     { icon: "📝", name: "TypeScript", level: "Advanced", bgColor: "bg-yellow-500" },
     { icon: "⚡", name: "JavaScript", level: "Expert", bgColor: "bg-pink-500" },
     { icon: "🐍", name: "Python", level: "Advanced", bgColor: "bg-blue-600" }
