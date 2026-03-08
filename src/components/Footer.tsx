@@ -61,10 +61,6 @@ const Footer: React.FC = () => {
               Building secure digital solutions for a safer Ethiopia. 
               Passionate about cybersecurity and innovative technology.
             </p>
-            <div className="flex items-center justify-center md:justify-start space-x-2">
-              <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-              <span className="text-green-400 text-base font-mono">Available for Hire</span>
-            </div>
           </motion.div>
           
           {/* Quick Links */}
