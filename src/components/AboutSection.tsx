@@ -61,7 +61,7 @@ const AboutSection = () => {
             I adhere to governance, risk management and compliance and local rules.
           </p>
           <p className="text-white text-lg leading-relaxed mt-4">
-            I am mentor more than 250+ cyber security enthusiasts.
+            I am mentor more than 230+ cyber security enthusiasts.
           </p>
         </motion.div>
         
@@ -110,6 +110,44 @@ const AboutSection = () => {
                 </motion.div>
               </motion.div>
             ))}
+          </div>
+          
+          {/* Hackathon Images */}
+          <div className="mt-6">
+            <h4 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>Hackathon Events</h4>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { src: "/hackatons/hackathon.jpg", alt: "Hackathon Event 1" },
+                { src: "/hackatons/samiHackathon.jpg", alt: "Sami Hackathon Event" }
+              ].map((hackathon, index) => (
+                <motion.div
+                  key={index}
+                  className="relative group"
+                  whileHover={{ scale: 1.05 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="aspect-[3/2] rounded-lg overflow-hidden bg-gray-800/50 border border-emerald-500/30">
+                    <img 
+                      src={hackathon.src} 
+                      alt={hackathon.alt} 
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-sm px-4 py-2 rounded-lg font-mono">
+                      🏆 Hackathon
+                    </span>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
