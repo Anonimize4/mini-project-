@@ -65,8 +65,16 @@ const ProjectsSection = () => {
       ]
     },
     {
-      title: "Experience 4",
-      description: "Description of your experience. Click to add details.",
+      title: "Junior Security Analyst",
+      company: "Freelance / Contract",
+      period: "2024 - Present",
+      points: [
+        "Monitored security alerts and performed initial triage of potential security incidents",
+        "Conducted vulnerability scans and assisted in remediation efforts",
+        "Documented security procedures and maintained incident response playbooks",
+        "Collaborated with senior analysts to investigate phishing attempts and malware infections",
+        "Participated in security awareness training sessions for end-users"
+      ]
     }
   ];
 

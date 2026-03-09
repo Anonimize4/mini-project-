@@ -31,6 +31,13 @@ const SkillsSection = () => {
       company: "Independent",
       period: "Ongoing",
       description: "Conducting research on emerging threats, vulnerabilities, and defense mechanisms. Active participant in Bug Bounty programs and CTF competitions. Ranked in the top 6% globally in Advent of Cyber 2025."
+    },
+    {
+      icon: "🛡️",
+      title: "Junior Security Analyst",
+      company: "Freelance / Contract",
+      period: "2024 - Present",
+      description: "Monitored security alerts and performed initial triage of potential security incidents. Conducted vulnerability scans and assisted in remediation efforts. Documented security procedures and maintained incident response playbooks. Collaborated with senior analysts to investigate phishing attempts and malware infections."
     }
   ];
 
@@ -71,6 +78,11 @@ const SkillsSection = () => {
     setExpandedExperience(null);
   };
 
+  // Handle click for experience items (toggle expansion)
+  const handleClickExperience = (index: number) => {
+    setExpandedExperience(expandedExperience === index ? null : index);
+  };
+
    // Handle mouse enter for skill items (hover expansion)
    const handleMouseEnterSkill= (index: number) => {
     setExpandedSkill(index);
@@ -79,6 +91,11 @@ const SkillsSection = () => {
   // Handle mouse leave for skill items (collapse)
   const handleMouseLeaveSkill = () => {
     setExpandedSkill(null);
+  };
+
+  // Handle click for skill items (toggle expansion)
+  const handleClickSkill = (index: number) => {
+    setExpandedSkill(expandedSkill === index ? null : index);
   };
 
   // Experience Item Component - Accordion with expand/collapse on hover
