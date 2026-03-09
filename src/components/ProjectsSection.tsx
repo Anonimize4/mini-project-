@@ -5,27 +5,27 @@ const ProjectsSection = () => {
     {
       title: "SIEM Lab with Wazuh",
       description: "Designed and deployed a centralized SIEM lab using Wazuh to collect and analyze logs from Linux endpoints and visualize security alerts through custom dashboards.",
-      image: null
+      image: "/myprojects/wazuh.png"
     },
     {
       title: "Network Traffic Analysis",
       description: "Performed network traffic analysis using Wireshark to identify malicious communication patterns and potential data exfiltration attempts.",
-      image: null
+      image: "/myprojects/wireshark.png"
     },
     {
       title: "Network Reconnaissance & Vulnerability Scanning",
       description: "Performed network reconnaissance and vulnerability scanning using Nmap.",
-      image: null
+      image: "/myprojects/nmap.png"
     },
     {
       title: "OWASP Top 10 Testing",
       description: "Tested OWASP Top 10 vulnerabilities (XSS, SQL Injection) in controlled lab environments using Burp Suite.",
-      image: null
+      image: "/myprojects/burp.png"
     },
     {
       title: "Phishing Simulation",
       description: "Conducted phishing simulation exercises using Setoolkit in controlled environments.",
-      image: null
+      image: "/myprojects/setoolkit.png"
     }
   ];
 
@@ -70,7 +70,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Junior Security Analyst",
-      company: "Freelance",
+      company: "",
       period: "2024 - Present",
       description: "",
       points: [
