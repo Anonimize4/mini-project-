@@ -34,6 +34,7 @@ const ProjectsSection = () => {
       title: "Cybersecurity Intern",
       company: "Information Network Security Administration (INSA)",
       period: "June 2025 – September 2025",
+      description: "",
       points: [
         "Penetration testing and security audits on critical infrastructure (INSA 29001)",
         "Gap analyses and risk assessments (ISO 27001, GDPR, PCI DSS)",
@@ -46,17 +47,20 @@ const ProjectsSection = () => {
       title: "Cybersecurity Studies & Labs",
       company: "Self-directed Learning",
       period: "January 2023 - June 2026",
+      description: "",
       points: [
         "Studied core cybersecurity concepts including network security, cryptography, web security, system security, and digital forensics",
         "Conducted hands-on labs in penetration testing, vulnerability assessment, and network analysis",
         "Used security tools including Wireshark, Nmap, Metasploit, and Burp Suite during practical labs",
-        "Identified vulnerabilities and implemented remediation strategies in lab environments"
+        "Identified vulnerabilities and implemented remediation strategies in lab environments",
+        "Ranked in the top 6% globally in Advent of Cyber 2025 (24+ hands-on labs)"
       ]
     },
     {
       title: "Cybersecurity Community Mentor",
       company: "Telegram",
       period: "240+ Members",
+      description: "",
       points: [
         "Managed a cybersecurity learning community with over 240 members",
         "Shared cybersecurity resources, labs, and learning materials",
@@ -66,8 +70,9 @@ const ProjectsSection = () => {
     },
     {
       title: "Junior Security Analyst",
-      company: "Freelance / Contract",
+      company: "Freelance",
       period: "2024 - Present",
+      description: "",
       points: [
         "Monitored security alerts and performed initial triage of potential security incidents",
         "Conducted vulnerability scans and assisted in remediation efforts",

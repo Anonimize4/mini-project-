@@ -35,7 +35,7 @@ const SkillsSection = () => {
     {
       icon: "🛡️",
       title: "Junior Security Analyst",
-      company: "Freelance / Contract",
+      company: "Freelance",
       period: "2024 - Present",
       description: "Monitored security alerts and performed initial triage of potential security incidents. Conducted vulnerability scans and assisted in remediation efforts. Documented security procedures and maintained incident response playbooks. Collaborated with senior analysts to investigate phishing attempts and malware infections."
     }
@@ -68,29 +68,9 @@ const SkillsSection = () => {
   const [expandedExperience, setExpandedExperience] = useState<number | null>(null);
   const [expandedSkill, setExpandedSkill] = useState<number | null>(null);
 
-  // Handle mouse enter for experience items (hover expansion)
-  const handleMouseEnterExperience = (index: number) => {
-    setExpandedExperience(index);
-  };
-
-  // Handle mouse leave for experience items (collapse)
-  const handleMouseLeaveExperience = () => {
-    setExpandedExperience(null);
-  };
-
   // Handle click for experience items (toggle expansion)
   const handleClickExperience = (index: number) => {
     setExpandedExperience(expandedExperience === index ? null : index);
-  };
-
-   // Handle mouse enter for skill items (hover expansion)
-   const handleMouseEnterSkill= (index: number) => {
-    setExpandedSkill(index);
-   };
- 
-  // Handle mouse leave for skill items (collapse)
-  const handleMouseLeaveSkill = () => {
-    setExpandedSkill(null);
   };
 
   // Handle click for skill items (toggle expansion)
