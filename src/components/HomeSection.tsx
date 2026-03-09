@@ -65,7 +65,7 @@ const HomeSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mb-6"
           >
-            <span className="text-2xl md:text-3xl text-cyan-400 font-mono">Cybersecurity Professional & Technical Researcher</span>
+            <span className="text-2xl md:text-3xl text-cyan-400 font-mono">Information Security | Network Security | Vulnerability Assessment</span>
             <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-green-400 mt-2 rounded-full"></div>
           </motion.div>
 

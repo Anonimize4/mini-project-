@@ -1,13 +1,19 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
 const AboutSection = () => {
-  const [expandedItem, setExpandedItem] = useState<number | null>(null);
-
   const communityItems = [
-    { title: "", description: "" },
-    { title: "", description: "" },
-    { title: "", description: "" }
+    { 
+      title: "Cyber Security Community Mentor", 
+      description: "Managed a cybersecurity learning community with over 240 members. Shared cybersecurity resources, labs, and learning materials. Guided members on security fundamentals and best practices. Encouraged discussion and collaborative learning among students."
+    },
+    { 
+      title: "INSA Internship", 
+      description: "Completed a cybersecurity internship at Information Network Security Administration (INSA). Participated in penetration testing activities and security audits on critical infrastructure, ensuring alignment with INSA 29001 standards."
+    },
+    { 
+      title: "Innovation Team Member", 
+      description: "Active member of Bahirdar University's innovation team, working on various tech projects and contributing to cybersecurity awareness programs."
+    }
   ];
 
   return (
@@ -78,36 +84,20 @@ const AboutSection = () => {
             {communityItems.map((item, index) => (
               <motion.div
                 key={index}
-                className="border border-emerald-500/30 rounded-lg overflow-hidden bg-gray-800/30"
+                className="border border-emerald-500/30 rounded-lg overflow-hidden bg-gray-800/30 hover:bg-gray-800/50 transition-colors duration-300"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
                 viewport={{ once: true }}
-                onMouseEnter={() => setExpandedItem(index)}
-                onMouseLeave={() => setExpandedItem(null)}
               >
-                <div className="p-4 flex items-center justify-between cursor-pointer">
-                  <span className="text-white font-mono">{item.title || "Click to add title"}</span>
-                  <motion.span 
-                    className="text-cyan-400"
-                    animate={{ rotate: expandedItem === index ? 180 : 0 }}
-                  >
-                    ▼
-                  </motion.span>
+                <div className="p-4">
+                  <span className="text-white font-mono text-lg block">{item.title}</span>
                 </div>
-                <motion.div
-                  initial={false}
-                  animate={{ 
-                    height: expandedItem === index ? "auto" : 0,
-                    opacity: expandedItem === index ? 1 : 0
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
-                  <p className="text-gray-300 px-4 pb-4 text-base">
-                    {item.description || "Click to add description"}
+                <div className="px-4 pb-4">
+                  <p className="text-gray-300 text-base">
+                    {item.description}
                   </p>
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </div>

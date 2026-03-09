@@ -3,46 +3,39 @@ import { motion } from 'framer-motion';
 const ProjectsSection = () => {
   const projects = [
     {
-      icon: "🔒",
-      title: "Penetration Testing Toolkit",
-      description: "Comprehensive cybersecurity toolkit for automated vulnerability assessment and penetration testing.",
-      technologies: ["Python", "React", "Node.js", "Security APIs"],
-      gradient: "from-red-500 to-orange-600",
+      icon: "📊",
+      title: "SIEM Lab with Wazuh",
+      description: "Designed and deployed a centralized SIEM lab using Wazuh to collect and analyze logs from Linux endpoints and visualize security alerts through custom dashboards.",
+      technologies: ["Wazuh", "Linux", "SIEM", "Dashboard"],
+      gradient: "from-green-500 to-emerald-600",
       featured: true
     },
     {
-      icon: "🛡️",
-      title: "Network Security Monitor",
-      description: "Real-time network monitoring system with threat detection and incident response capabilities.",
-      technologies: ["Python", "TypeScript", "WebSocket", "Elasticsearch"],
+      icon: "🔍",
+      title: "Network Traffic Analysis",
+      description: "Performed network traffic analysis using Wireshark to identify malicious communication patterns and potential data exfiltration attempts.",
+      technologies: ["Wireshark", "Network Security", "Traffic Analysis", "Forensics"],
       gradient: "from-blue-500 to-cyan-600"
     },
     {
-      icon: "📊",
-      title: "Security Analytics Dashboard",
-      description: "Interactive dashboard for security metrics visualization and threat intelligence analysis.",
-      technologies: ["React", "D3.js", "Python", "PostgreSQL"],
-      gradient: "from-green-500 to-teal-600"
+      icon: "🗺️",
+      title: "Network Reconnaissance & Vulnerability Scanning",
+      description: "Performed network reconnaissance and vulnerability scanning using Nmap to identify open ports, services, and potential vulnerabilities.",
+      technologies: ["Nmap", "Vulnerability Assessment", "Network Security", "Penetration Testing"],
+      gradient: "from-red-500 to-orange-600"
     },
     {
-      icon: "🔍",
-      title: "Vulnerability Scanner",
-      description: "Automated vulnerability scanning tool for web applications and network infrastructure.",
-      technologies: ["Python", "Nmap", "Security Libraries", "Docker"],
+      icon: "🐛",
+      title: "OWASP Top 10 Testing",
+      description: "Tested OWASP Top 10 vulnerabilities (XSS, SQL Injection) in controlled lab environments using Burp Suite for web application security.",
+      technologies: ["Burp Suite", "OWASP", "Web Security", "XSS", "SQL Injection"],
       gradient: "from-purple-500 to-pink-600"
     },
     {
-      icon: "🚀",
-      title: "Secure Coding Platform",
-      description: "Educational platform for learning secure coding practices and cybersecurity fundamentals.",
-      technologies: ["React", "Node.js", "MongoDB", "JWT"],
-      gradient: "from-indigo-500 to-purple-600"
-    },
-    {
-      icon: "📱",
-      title: "Mobile Security App",
-      description: "Android application for mobile device security assessment and privacy protection.",
-      technologies: ["React Native", "Security APIs", "Firebase", "Android"],
+      icon: "🎣",
+      title: "Phishing Simulation",
+      description: "Conducted phishing simulation exercises using Setoolkit in controlled environments to test organizational security awareness.",
+      technologies: ["Setoolkit", "Social Engineering", "Security Awareness", "Phishing"],
       gradient: "from-yellow-500 to-red-600"
     }
   ];

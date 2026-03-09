@@ -30,6 +30,18 @@ const ContactSection = () => {
       title: "GitHub",
       value: "Anonimize4",
       link: "https://github.com/Anonimize4"
+    },
+    {
+      icon: "✍️",
+      title: "Medium",
+      value: "@samuelbelay81",
+      link: "https://medium.com/@samuelbelay81"
+    },
+    {
+      icon: "🔗",
+      title: "Portfolio",
+      value: "sami-portfolio-one.vercel.app",
+      link: "https://sami-portfolio-one.vercel.app"
     }
   ];
 

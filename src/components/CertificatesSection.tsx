@@ -11,33 +11,34 @@ const CertificatesSection = () => {
     },
     {
       icon: "🔐",
-      title: "Certified Cybersecurity (CC)",
+      title: "ISC2 Certified in Cybersecurity (CC)",
       issuer: "(ISC)²",
       issuedDate: "2025",
       image: "/certificates/cc.png"
     },
     {
-      icon: "📱",
-      title: "Android and Programming Certificate",
-      issuer: "Five Million Coders",
+      icon: "💻",
+      title: "Advent of Cyber 2025",
+      issuer: "TryHackMe",
       issuedDate: "2025",
-      image: "/certificates/programing.png",
-      pdf: "/certificates/android.pdf"
+      image: "/certificates/Aoc.pdf",
+      pdf: "/certificates/Aoc.pdf"
     },
     {
       icon: "🛡️",
-      title: "Cyber Shield Showdown CTF 2025 Hacking Certificate",
-      issuer: "ALX Ethiopia",
+      title: "Cybershield Showdown CTF Participation",
+      issuer: "Yekolo Temari",
       issuedDate: "2025",
       image: "/certificates/yekolo.png",
-      pdf: "/certificates/100-137-10.pdf"
+      pdf: "/certificates/yekolo.png"
     },
     {
       icon: "💻",
-      title: "Coding Hackathon Certificate",
-      issuer: "BiTech with PAN",
+      title: "Local Coding Hackathon (Community Problem Solving)",
+      issuer: "Community",
       issuedDate: "2025",
-      pdf: "/certificates/programming.pdf"
+      image: "/hackatons/hackathon.jpg",
+      pdf: "/hackatons/hackathon.jpg"
     }
   ];
 
