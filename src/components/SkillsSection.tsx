@@ -61,12 +61,24 @@ const SkillsSection = () => {
   const [expandedExperience, setExpandedExperience] = useState<number | null>(null);
   const [expandedSkill, setExpandedSkill] = useState<number | null>(null);
 
+  // Handle mouse enter for experience items (hover expansion)
   const handleMouseEnterExperience = (index: number) => {
     setExpandedExperience(index);
   };
 
-  const handleMouseEnterSkill = (index: number) => {
+  // Handle mouse leave for experience items (collapse)
+  const handleMouseLeaveExperience = () => {
+    setExpandedExperience(null);
+  };
+
+   // Handle mouse enter for skill items (hover expansion)
+   const handleMouseEnterSkill= (index: number) => {
     setExpandedSkill(index);
+   };
+ 
+  // Handle mouse leave for skill items (collapse)
+  const handleMouseLeaveSkill = () => {
+    setExpandedSkill(null);
   };
 
   // Experience Item Component - Accordion with expand/collapse on hover
@@ -90,7 +102,7 @@ const SkillsSection = () => {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: delay + index * 0.1 }}
-      onMouseEnter={() => handleMouseEnterExperience(index)}
+      onClick={() => handleClickExperience(index)}
     >
       <div className="p-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
@@ -149,7 +161,7 @@ const SkillsSection = () => {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.4, delay: delay + index * 0.1 }}
-      onMouseEnter={() => handleMouseEnterSkill(index)}
+      onClick={() => handleClickSkill(index)}
     >
       <div className="p-4 flex items-center space-x-4">
         <div className={`w-12 h-12 ${skill.bgColor} rounded-full flex items-center justify-center flex-shrink-0`}>
@@ -207,21 +219,23 @@ const SkillsSection = () => {
         
         {/* Skills Section - Right Side */}
         <div className="flex-1">
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>Technical Skills</h3>
-            <div className="space-y-3">
-              {technicalSkills.map((skill, index) => (
-                <SkillItem key={index} skill={skill} index={index} />
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>Technical Skills</h3>
+              <div className="space-y-3">
+                {technicalSkills.map((skill, index) => (
+                  <SkillItem key={index} skill={skill} index={index} />
+                ))}
+              </div>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>Soft Skills</h3>
-            <div className="space-y-3">
-              {softSkills.map((skill, index) => (
-                <SkillItem key={index} skill={skill} index={index + technicalSkills.length} />
-              ))}
+            
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>Soft Skills</h3>
+              <div className="space-y-3">
+                {softSkills.map((skill, index) => (
+                  <SkillItem key={index} skill={skill} index={index + technicalSkills.length} />
+                ))}
+              </div>
             </div>
           </div>
         </div>

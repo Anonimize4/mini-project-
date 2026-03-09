@@ -21,8 +21,7 @@ const CertificatesSection = () => {
       title: "Advent of Cyber 2025",
       issuer: "TryHackMe",
       issuedDate: "2025",
-      image: "/certificates/Aoc.pdf",
-      pdf: "/certificates/Aoc.pdf"
+      image: "/certificates/Aoc.png"
     },
     {
       icon: "🛡️",
@@ -137,15 +136,6 @@ const CertificatesSection = () => {
                     }} />
                   </i>
                 </figure>
-                <motion.section
-                  className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                >
-                  <button className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white text-sm px-4 py-2 rounded-lg font-mono">
-                    👁️ View Certificate
-                  </button>
-                </motion.section>
               </motion.li>
             ))}
           </ul>

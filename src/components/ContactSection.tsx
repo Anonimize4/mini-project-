@@ -20,12 +20,6 @@ const ContactSection = () => {
       link: "https://t.me/+2MB6c6QBCIk1N2Rk"
     },
     {
-      icon: "💬",
-      title: "Discord",
-      value: "Discord",
-      link: "https://discord.com/channels/1440029472496550040/1440029473536872513"
-    },
-    {
       icon: "🐙",
       title: "GitHub",
       value: "Anonimize4",
@@ -36,12 +30,6 @@ const ContactSection = () => {
       title: "Medium",
       value: "@samuelbelay81",
       link: "https://medium.com/@samuelbelay81"
-    },
-    {
-      icon: "🔗",
-      title: "Portfolio",
-      value: "sami-portfolio-one.vercel.app",
-      link: "https://sami-portfolio-one.vercel.app"
     }
   ];
 

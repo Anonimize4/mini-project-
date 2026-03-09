@@ -32,6 +32,37 @@ const AboutSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Summary Section */}
+      <motion.div 
+        className="mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>▸ SUMMARY</h3>
+        <div className="bg-gray-800/30 border border-emerald-500/30 rounded-lg p-4">
+          <ul className="text-white text-lg space-y-2">
+            <li className="flex items-start">
+              <span className="text-green-400 mr-2">▸</span>
+              Aspiring Cybersecurity Professional with ISC2 CC certification
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-400 mr-2">▸</span>
+              BS degree pursuing with hands-on SIEM deployment experience
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-400 mr-2">▸</span>
+              Internship experience at INSA in security audits
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-400 mr-2">▸</span>
+              Interested in bridging GRC with technical security
+            </li>
+          </ul>
+        </div>
+      </motion.div>
       
       <div className="flex flex-col lg:flex-row gap-8 mb-8">
         {/* Left Side - whoami? */}
@@ -83,7 +114,10 @@ const AboutSection = () => {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>Community Participation</h3>
-          <div className="space-y-3">
+          <div 
+            className="space-y-3"
+            onMouseLeave={() => setExpandedCommunity(null)}
+          >
             {communityItems.map((item, index) => {
               const isExpanded = expandedCommunity === index;
               return (

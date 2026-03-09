@@ -2,8 +2,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomeSection from './components/HomeSection';
 import AboutSection from './components/AboutSection';
-import SkillsSection from './components/SkillsSection';
 import CertificatesSection from './components/CertificatesSection';
+import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import CyberBackground from './components/CyberBackground';
 
@@ -16,8 +16,8 @@ function App() {
         <main className="flex-grow container mx-auto px-4 py-8">
           <HomeSection />
           <AboutSection />
-          <SkillsSection />
           <CertificatesSection />
+          <ProjectsSection />
           <ContactSection />
         </main>
         <Footer />
