@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const AboutSection = () => {
+  const [expandedCommunity, setExpandedCommunity] = useState<number | null>(null);
+
   const communityItems = [
     { 
       title: "Cyber Security Community Mentor", 
@@ -81,25 +84,39 @@ const AboutSection = () => {
         >
           <h3 className="text-3xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>Community Participation</h3>
           <div className="space-y-3">
-            {communityItems.map((item, index) => (
+            {communityItems.map((item, index) => {
+              const isExpanded = expandedCommunity === index;
+              return (
               <motion.div
                 key={index}
-                className="border border-emerald-500/30 rounded-lg overflow-hidden bg-gray-800/30 hover:bg-gray-800/50 transition-colors duration-300"
+                className="border border-emerald-500/30 rounded-lg overflow-hidden bg-gray-800/30 hover:bg-gray-800/50 transition-colors duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
                 viewport={{ once: true }}
+                onMouseEnter={() => setExpandedCommunity(index)}
               >
                 <div className="p-4">
                   <span className="text-white font-mono text-lg block">{item.title}</span>
                 </div>
-                <div className="px-4 pb-4">
-                  <p className="text-gray-300 text-base">
-                    {item.description}
-                  </p>
-                </div>
+                <motion.div
+                  initial={false}
+                  animate={{ 
+                    height: isExpanded ? 'auto' : 0,
+                    opacity: isExpanded ? 1 : 0
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-4 pb-4">
+                    <p className="text-gray-300 text-base">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
           
           {/* Hackathon Images */}

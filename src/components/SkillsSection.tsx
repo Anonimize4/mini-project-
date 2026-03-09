@@ -57,29 +57,19 @@ const SkillsSection = () => {
     { icon: "👥", name: "Leadership", level: "Advanced", bgColor: "bg-rose-500", details: "Leading security initiatives, mentoring 240+ cybersecurity enthusiasts" }
   ];
 
-  const getSkillLevel = (level: string) => {
-    const levels: { [key: string]: number } = {
-      "Expert": 95,
-      "Advanced": 80,
-      "Intermediate": 65,
-      "Beginner": 40
-    };
-    return levels[level] || 50;
-  };
-
   // State for accordion functionality
   const [expandedExperience, setExpandedExperience] = useState<number | null>(null);
   const [expandedSkill, setExpandedSkill] = useState<number | null>(null);
 
-  const toggleExperience = (index: number) => {
-    setExpandedExperience(expandedExperience === index ? null : index);
+  const handleMouseEnterExperience = (index: number) => {
+    setExpandedExperience(index);
   };
 
-  const toggleSkill = (index: number) => {
-    setExpandedSkill(expandedSkill === index ? null : index);
+  const handleMouseEnterSkill = (index: number) => {
+    setExpandedSkill(index);
   };
 
-  // Experience Item Component - Accordion with expand/collapse
+  // Experience Item Component - Accordion with expand/collapse on hover
   const ExperienceItem = ({ exp, index, delay = 0 }: { 
     exp: { 
       icon: string; 
@@ -100,7 +90,7 @@ const SkillsSection = () => {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: delay + index * 0.1 }}
-      onClick={() => toggleExperience(index)}
+      onMouseEnter={() => handleMouseEnterExperience(index)}
     >
       <div className="p-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
@@ -138,7 +128,7 @@ const SkillsSection = () => {
   );
   };
 
-  // Skill Item Component - Accordion with expand/collapse
+  // Skill Item Component - Accordion with expand/collapse on hover (simplified style)
   const SkillItem = ({ skill, index, delay = 0 }: { 
     skill: { 
       icon: string; 
@@ -159,7 +149,7 @@ const SkillsSection = () => {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.4, delay: delay + index * 0.1 }}
-      onClick={() => toggleSkill(index)}
+      onMouseEnter={() => handleMouseEnterSkill(index)}
     >
       <div className="p-4 flex items-center space-x-4">
         <div className={`w-12 h-12 ${skill.bgColor} rounded-full flex items-center justify-center flex-shrink-0`}>
@@ -167,18 +157,10 @@ const SkillsSection = () => {
         </div>
         <div className="flex-1">
           <h3 className="text-white font-semibold text-lg">{skill.name}</h3>
-          <p className="text-gray-400 text-sm">{skill.level}</p>
         </div>
-        <motion.span 
-          className="text-cyan-400 text-xl"
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          ▼
-        </motion.span>
       </div>
       
-      {/* Collapsible content with progress bar */}
+      {/* Collapsible content */}
       <motion.div
         initial={false}
         animate={{ 
@@ -189,21 +171,9 @@ const SkillsSection = () => {
         className="overflow-hidden"
       >
         <div className="px-4 pb-4">
-          <p className="text-gray-300 text-sm mb-3">{skill.details}</p>
-          <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
-            <motion.div 
-              className={`h-full ${skill.bgColor} rounded-full`}
-              initial={{ width: 0 }}
-              animate={{ width: `${getSkillLevel(skill.level)}%` }}
-              transition={{ duration: 1, delay: 0.2 }}
-              style={{
-                boxShadow: '0 0 10px rgba(57, 255, 20, 0.5)'
-              }}
-            />
-          </div>
-          <div className="mt-2 text-right">
-            <span className="text-sm text-gray-400 font-mono">{getSkillLevel(skill.level)}%</span>
-          </div>
+          <p className="text-gray-300 text-sm">
+            {skill.details}
+          </p>
         </div>
       </motion.div>
     </motion.div>
