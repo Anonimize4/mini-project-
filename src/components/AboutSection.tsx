@@ -43,24 +43,9 @@ const AboutSection = () => {
       >
         <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>▸ SUMMARY</h3>
         <div className="bg-gray-800/30 border border-emerald-500/30 rounded-lg p-4">
-          <ul className="text-white text-lg space-y-2">
-            <li className="flex items-start">
-              <span className="text-green-400 mr-2">▸</span>
-              Aspiring Cybersecurity Professional with ISC2 CC certification
-            </li>
-            <li className="flex items-start">
-              <span className="text-green-400 mr-2">▸</span>
-              BS degree pursuing with hands-on SIEM deployment experience
-            </li>
-            <li className="flex items-start">
-              <span className="text-green-400 mr-2">▸</span>
-              Internship experience at INSA in security audits
-            </li>
-            <li className="flex items-start">
-              <span className="text-green-400 mr-2">▸</span>
-              Interested in bridging GRC with technical security
-            </li>
-          </ul>
+          <p className="text-white text-lg leading-relaxed">
+            Highly motivated Cybersecurity and Cloud Security enthusiast with hands-on experience in vulnerability assessment, threat analysis, and secure cloud practices. Achieved effective security monitoring and log analysis through Wazuh implementation. Focused on continuous learning and building secure, scalable systems.
+          </p>
         </div>
       </motion.div>
       
