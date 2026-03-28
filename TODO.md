@@ -1,29 +1,21 @@
-# Fix Accordion Issue Plan
+# Fix CSS Lint Error and TypeScript Build Errors
 
-## Information Gathered
-- Files with accordion issues: AboutSection.tsx and SkillsSection.tsx
-- All accordions used `onMouseEnter` (hover) to expand items
-- This caused conflicts when hovering over different items
+## Steps:
+ - [x] Step 1: Edit src/index.css to replace invalid @theme block with standard :root custom property
+ - [x] Step 2: Verify no other lint errors introduced  
+ - [x] Step 3: Complete CSS task
 
-## Plan (COMPLETED)
-Fixed all accordion sections by changing from hover to click-based interaction
+## TypeScript Fixes (src/components/SkillsSection.tsx):
+ - [x] Step 4: Add missing handleClickSkill function
+ - [x] Step 5: Resolve unused setExpandedSkill warning (via new function)
+ - [x] Step 6: Verify clean npm run build
 
-## Changes Made:
+## Text Update: Change greeting
+ - [x] Step 7: Edit src/components/HomeSection.tsx - Replace name in "Hi, I'm ..." 
+ - [x] Step 8: Verify change
+ - [x] Step 9: Remove "Hi, I'm " prefix, capitalize to "Ethical Hacker and Penetration Tester"
+ - [x] Step 10: Final verify
 
-### AboutSection.tsx
-- Changed: `onMouseEnter={() => setExpandedCommunity(index)}`
-- To: `onClick={() => setExpandedCommunity(expandedCommunity === index ? null : index)}`
-
-### SkillsSection.tsx
-- Changed handlers from `handleMouseEnterExperience` to `handleClickExperience`
-- Changed handlers from `handleMouseEnterSkill` to `handleClickSkill`
-- Changed `onMouseEnter` to `onClick` in both ExperienceItem and SkillItem components
-
-## Behavior Now:
-- Click on an item to expand it
-- Click on the same expanded item to collapse it
-- Only one item can be expanded at a time (proper accordion behavior)
-
-## Followup Steps
-- ✅ Task completed
-
+## Status Badge Update
+ - [x] Step 11: Change "Open to Opportunities" to "Stay Ahead of the Curve" + gradient highlight
+ - [x] Step 12: Verify update

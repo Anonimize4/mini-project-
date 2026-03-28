@@ -55,8 +55,7 @@ const HomeSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl font-bold mb-6 font-mono tracking-wide"
           >
-            <span className="text-white">{"Hi, I'm "}</span>
-            <span className="gradient-text">{"SAMUEL BELAY"}</span>
+            <span className="gradient-text">"Ethical Hacker and Penetration Tester"</span>
           </motion.h1>
 
           <motion.div
@@ -88,7 +87,7 @@ const HomeSection = () => {
           >
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-              <span className="text-gray-300 text-base font-mono">Open to Opportunities</span>
+              <span className="gradient-text text-base font-mono">Stay Ahead of the Curve</span>
             </div>
           </motion.div>
 
