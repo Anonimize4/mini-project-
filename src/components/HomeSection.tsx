@@ -53,9 +53,9 @@ const HomeSection = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-6 font-mono tracking-wide"
+            className="text-5xl md:text-7xl font-bold mb-6 font-mono tracking-wide glow-effect"
           >
-            <span className="gradient-text">"Ethical Hacker and Penetration Tester"</span>
+            <span className="gradient-text text-glow-cyan">Ethical Hacker and Penetration Tester</span>
           </motion.h1>
 
           <motion.div

@@ -19,3 +19,12 @@
 ## Status Badge Update
  - [x] Step 11: Change "Open to Opportunities" to "Stay Ahead of the Curve" + gradient highlight
  - [x] Step 12: Verify update
+
+## Hero Title Quotes Removal
+ - [x] Step 13: Remove quotes from "Ethical Hacker and Penetration Tester"
+ - [x] Step 14: Final check
+ 
+## Hero Title Impressive Gradient + Glow
+ - [x] Step 15: Wrap text in gradient-text + text-glow-cyan span
+ - [x] Step 16: Add hover color swap animation
+ - [x] Step 17: Verify effect
