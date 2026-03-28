@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="htb-white hover:text-emerald-400 group-hover:htb-emerald-500 group-hover:shadow-[0_0_10px_theme(colors.emerald.500/0.8)] transition-all duration-300 text-lg relative group"
+            className="text-white hover:text-emerald-400 transition-all duration-300 text-lg relative group glow-effect"
           >
             {item.label}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
