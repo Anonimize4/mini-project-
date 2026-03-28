@@ -128,7 +128,7 @@ const AboutSection = () => {
                   className="overflow-hidden"
                 >
                   <div className="px-4 pb-4">
-                    <p className="text-gray-300 text-base">
+                    <p className="text-white text-base">
                       {item.description}
                     </p>
                   </div>
