@@ -50,29 +50,29 @@ const ContactSection = () => {
       <main className="max-w-4xl mx-auto">
         <div className="p-6">
           <h3 className="text-3xl font-semibold mb-6 font-mono gradient-text">Contact Information</h3>
-          <ul className="space-y-4">
+          <ul className="space-y-3">
             {contactInfo.map((info, index) => (
               <motion.li key={index}>
                 <motion.a
                   href={info.link}
                   target={info.link.startsWith('http') ? '_blank' : '_self'}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="flex items-center space-x-4 p-4 rounded-lg hover:bg-gray-700/50 transition-all duration-300 group"
-                  whileHover={{ x: 10, scale: 1.02 }}
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50 transition-all duration-300 group"
+                  whileHover={{ x: 8, scale: 1.01 }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <motion.i 
-                    className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 text-white text-3xl"
+                    className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xl"
                     whileHover={{ scale: 1.1, rotate: 360 }}
                     transition={{ duration: 0.5 }}
                   >
                     {info.icon}
                   </motion.i>
                   <div className="flex-1">
-                    <h4 className="text-white font-semibold text-xl">{info.title}</h4>
-                    <p className="text-cyan-400 text-base font-mono">{info.value}</p>
+                    <h4 className="text-white font-semibold text-lg">{info.title}</h4>
+                    <p className="text-cyan-400 text-sm font-mono">{info.value}</p>
                   </div>
                   <motion.i
                     className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-300 text-xl"
