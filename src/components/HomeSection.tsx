@@ -29,7 +29,6 @@ const HomeSection = () => {
       } else {
         setCurrentSkill(current.substring(0, charIndex - 1));
         setCharIndex(charIndex - 1);
-
         if (charIndex - 1 === 0) {
           setIsDeleting(false);
           setSkillIndex((skillIndex + 1) % skills.length);
@@ -49,14 +48,7 @@ const HomeSection = () => {
           transition={{ duration: 0.8 }}
           className="flex-1"
         >
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-6 font-mono tracking-wide glow-effect"
-          >
-            <span className="gradient-text text-glow-cyan">Ethical Hacker and Penetration Tester</span>
-          </motion.h1>
+          <h1 className="text-xs text-red-500 font-bold mb-6">Ethical Hacker and Penetration Tester</h1>
 
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -120,7 +112,7 @@ const HomeSection = () => {
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg font-mono transition-all duration-300"
             >
-              📄 Download CV
+          📄 My  Resume
             </motion.a>
           </div>
         </motion.div>
