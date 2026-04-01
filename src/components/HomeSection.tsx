@@ -48,7 +48,7 @@ const HomeSection = () => {
           transition={{ duration: 0.8 }}
           className="flex-1"
         >
-          <h1 className="text-xs text-red-500 font-bold mb-6">Ethical Hacker and Penetration Tester</h1>
+          <h1 className="text-4xl text-red-500 font-bold mb-6">Ethical Hacker and Penetration Tester</h1>
 
           <motion.div
             initial={{ opacity: 0, y: -20 }}
