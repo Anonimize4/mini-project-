@@ -1,32 +1,34 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { Mail, Phone, Send, Github, PenTool, ArrowUpRight } from 'lucide-react';
+
 const ContactSection = () => {
   const contactInfo = [
     {
-      icon: "📧",
+      icon: Mail,
       title: "Email",
       value: "samuelbelay81@gmail.com",
       link: "mailto:samuelbelay81@gmail.com"
     },
     {
-      icon: "📱",
+      icon: Phone,
       title: "Phone",
       value: "+251 927 669 472",
       link: "tel:+251927669472"
     },
     {
-      icon: "📱",
+      icon: Send,
       title: "Telegram",
-      value: "Telegram",
+      value: "Join Community",
       link: "https://t.me/+2MB6c6QBCIk1N2Rk"
     },
     {
-      icon: "🐙",
+      icon: Github,
       title: "GitHub",
       value: "Anonimize4",
       link: "https://github.com/Anonimize4"
     },
     {
-      icon: "✍️",
+      icon: PenTool,
       title: "Medium",
       value: "@samuelbelay81",
       link: "https://medium.com/@samuelbelay81"
@@ -34,58 +36,76 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="mb-12">
-      <header className="text-center mb-8">
-        <h2 className="text-4xl font-bold font-mono inline-block relative" style={{ color: '#39FF14' }}>
-          Get In Touch
-          <i className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></i>
-        </h2>
-        <main className="flex justify-center mt-2">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <i key={star} className="text-yellow-400 text-xl">⭐</i>
-          ))}
-        </main>
-      </header>
+    <section id="contact" className="py-20">
+      {/* Section Header */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">Get In Touch</h2>
+        <div className="section-title-line mx-auto" />
+        <p className="text-slate-400 mt-4 max-w-xl mx-auto">
+          Interested in working together? Feel free to reach out through any of these channels.
+        </p>
+      </motion.div>
       
-      <main className="max-w-4xl mx-auto">
-        <div className="p-6">
-          <h3 className="text-3xl font-semibold mb-6 font-mono gradient-text">Contact Information</h3>
-          <ul className="space-y-3">
-            {contactInfo.map((info, index) => (
-              <motion.li key={index}>
+      <div className="max-w-2xl mx-auto">
+        <div className="card rounded-xl p-8">
+          <h3 className="text-xl font-semibold gradient-text mb-8 text-center">Contact Information</h3>
+          
+          <div className="space-y-4">
+            {contactInfo.map((info, index) => {
+              const Icon = info.icon;
+              const isExternal = info.link.startsWith('http');
+              
+              return (
                 <motion.a
+                  key={index}
                   href={info.link}
-                  target={info.link.startsWith('http') ? '_blank' : '_self'}
-                  rel={info.link.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50 transition-all duration-300 group"
-                  whileHover={{ x: 8, scale: 1.01 }}
+                  target={isExternal ? '_blank' : '_self'}
+                  rel={isExternal ? 'noopener noreferrer' : ''}
+                  className="flex items-center gap-4 p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-500/50 hover:bg-slate-800 transition-all duration-300 group"
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <motion.i 
-                    className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xl"
-                    whileHover={{ scale: 1.1, rotate: 360 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {info.icon}
-                  </motion.i>
-                  <div className="flex-1">
-                    <h4 className="text-white font-semibold text-lg">{info.title}</h4>
-                    <p className="text-cyan-400 text-sm font-mono">{info.value}</p>
+                  <div className="icon-container flex-shrink-0">
+                    <Icon className="w-5 h-5" />
                   </div>
-                  <motion.i
-                    className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-300 text-xl"
-                    whileHover={{ scale: 1.2 }}
-                  >
-                    →
-                  </motion.i>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-slate-200 font-medium group-hover:text-cyan-400 transition-colors">
+                      {info.title}
+                    </h4>
+                    <p className="text-slate-400 text-sm truncate">{info.value}</p>
+                  </div>
+                  <ArrowUpRight className="w-5 h-5 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </motion.a>
-              </motion.li>
-            ))}
-          </ul>
+              );
+            })}
+          </div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-10 text-center"
+          >
+            <p className="text-slate-400 text-sm mb-4">
+              Open to opportunities in cybersecurity and penetration testing
+            </p>
+            <div className="flex items-center justify-center gap-2">
+              <span className="status-indicator" />
+              <span className="text-sm text-slate-300">Available for hire</span>
+            </div>
+          </motion.div>
         </div>
-      </main>
+      </div>
     </section>
   );
 };
