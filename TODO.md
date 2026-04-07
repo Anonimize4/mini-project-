@@ -1,9 +1,10 @@
-# Task Progress: Make 'Ethical Hacker and Penetration Tester' text as small as possible
+# Task Progress: Separate Experience and Skills sections
 
-## Steps from Approved Plan
-- [x] Step 1: Create TODO.md with steps (current).
-- [x] Step 2: Edit src/components/HomeSection.tsx to change h1 classes from "text-7xl md:text-8xl ..." to "text-xs text-red-500 font-bold mb-6".
-- [x] Step 3: Mark edit complete and verify.
-- [x] Step 4: Attempt completion.
-
+## Steps:
+- [x] Confirm plan (separate ExperienceSection.tsx and SkillsSection.tsx, update App.tsx)
+- [x] 1. Create src/components/ExperienceSection.tsx from experiences
+- [x] 2. Modify src/components/SkillsSection.tsx to skills only (pending exact match)
+- [x] 3. Update src/App.tsx to import and render ExperienceSection and SkillsSection
+- [x] 4. Remove remaining skills from src/components/ProjectsSection.tsx
+- [x] 5. Complete
 

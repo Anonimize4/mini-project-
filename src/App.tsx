@@ -5,6 +5,9 @@ import AboutSection from './components/AboutSection';
 import CertificatesSection from './components/CertificatesSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
+import ExperienceSection from './components/ExperienceSection';
+import ProgrammingSection from './components/ProgrammingSection';
+import SkillsSection from './components/SkillsSection';
 import CyberBackground from './components/CyberBackground';
 
 function App() {
@@ -16,7 +19,10 @@ function App() {
         <main className="flex-grow container mx-auto px-4 py-8">
           <HomeSection />
           <AboutSection />
-          <CertificatesSection />
+          <ExperienceSection />
+          <ProgrammingSection />
+          <SkillsSection />
+          <CertificatesSection /> 
           <ProjectsSection />
           <ContactSection />
         </main>

@@ -3,42 +3,14 @@ import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
 
-  const experiences = [
-    { 
-      icon: "💼", 
-      title: "Cybersecurity Intern", 
-      company: "Information Network Security Administration (INSA)",
-      period: "June 2025 – September 2025",
-      description: "Participated in penetration testing activities and security audits on critical infrastructure, ensuring alignment with INSA 29001 standards and documenting high-risk findings for remediation. Conducted gap analyses and risk assessments mapped to ISO 27001, GDPR, and PCI DSS. Collaborated with development teams to integrate security into the SDLC, performing web application testing and providing actionable mitigation strategies for OWASP Top 10 vulnerabilities."
-    },
-    { 
-      icon: "🎓", 
-      title: "Cybersecurity Studies & Labs",
-      company: "Self-directed Learning",
-      period: "January 2023 - Present",
-      description: "Studied core cybersecurity concepts including network security, cryptography, web security, system security, and digital forensics. Conducted hands-on labs in penetration testing, vulnerability assessment, and network analysis. Used security tools including Wireshark, Nmap, Metasploit, and Burp Suite during practical labs."
-    },
-    { 
-      icon: "👥", 
-      title: "Cyber Security Community Mentor", 
-      company: "Telegram Community",
-      period: "2023 - Present",
-      description: "Managed a cybersecurity learning community with over 240 members. Shared cybersecurity resources, labs, and learning materials. Guided members on security fundamentals and best practices. Encouraged discussion and collaborative learning among students."
-    },
-    { 
-      icon: "🔬", 
-      title: "Security Researcher", 
-      company: "Independent",
-      period: "Ongoing",
-      description: "Conducting research on emerging threats, vulnerabilities, and defense mechanisms. Active participant in Bug Bounty programs and CTF competitions. Ranked in the top 6% globally in Advent of Cyber 2025."
-    },
-    {
-      icon: "🛡️",
-      title: "Junior Security Analyst",
-      company: "Freelance",
-      period: "2024 - Present",
-      description: "Monitored security alerts and performed initial triage of potential security incidents. Conducted vulnerability scans and assisted in remediation efforts. Documented security procedures and maintained incident response playbooks. Collaborated with senior analysts to investigate phishing attempts and malware infections."
-    }
+  const programmingLanguages = [
+    { icon: "🐍", name: "Python", level: "Advanced", bgColor: "bg-green-500", details: "Scripting, automation, pentesting tools (Scapy, Requests), exploit development, data analysis for security" },
+    { icon: "🔥", name: "JavaScript/TypeScript", level: "Advanced", bgColor: "bg-yellow-500", details: "Web app security testing, Node.js tools, browser extensions, React/Vue for security dashboards" },
+    { icon: "🐚", name: "Bash/Shell Scripting", level: "Proficient", bgColor: "bg-orange-500", details: "Automation scripts, log analysis, network enumeration, custom pentest workflows" },
+    { icon: "⚙️", name: "C/C++", level: "Intermediate", bgColor: "bg-blue-500", details: "Exploit development, reverse engineering, low-level security tools, buffer overflow analysis" },
+    { icon: "☕", name: "Java", level: "Proficient", bgColor: "bg-red-500", details: "Enterprise app security, Android pentesting, Spring Boot security, deserialization exploits" },
+    { icon: "📦", name: "Go", level: "Intermediate", bgColor: "bg-purple-500", details: "Modern security tools (Amass, ffuf), high-performance scanners, CLI pentest utilities" },
+    { icon: "🦀", name: "Rust", level: "Intermediate", bgColor: "bg-teal-500", details: "Memory-safe security tools, kernel modules, high-performance fuzzers" }
   ];
 
   const technicalSkills = [
@@ -65,76 +37,11 @@ const SkillsSection = () => {
   ];
 
   // State for accordion functionality
-  const [expandedExperience, setExpandedExperience] = useState<number | null>(null);
   const [expandedSkill, setExpandedSkill] = useState<number | null>(null);
-
-  // Handle click for experience items (toggle expansion)
-  const handleClickExperience = (index: number) => {
-    setExpandedExperience(expandedExperience === index ? null : index);
-  };
 
   // Handle click for skill items (toggle expansion)
   const handleClickSkill = (index: number) => {
     setExpandedSkill(expandedSkill === index ? null : index);
-  };
-
-  // Experience Item Component - Accordion with expand/collapse on hover
-  const ExperienceItem = ({ exp, index, delay = 0 }: { 
-    exp: { 
-      icon: string; 
-      title: string; 
-      company: string;
-      period: string;
-      description: string; 
-    }; 
-    index: number; 
-    delay?: number 
-  }) => {
-    const isExpanded = expandedExperience === index;
-    
-    return (
-    <motion.div
-      key={index}
-      className="border border-emerald-500/30 rounded-lg overflow-hidden bg-gray-800/30 hover:bg-gray-800/50 transition-colors duration-300 cursor-pointer"
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: delay + index * 0.1 }}
-      onClick={() => handleClickExperience(index)}
-    >
-      <div className="p-4 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <span className="text-2xl">{exp.icon}</span>
-          <div>
-            <span className="text-white font-semibold text-lg block">{exp.title}</span>
-            <span className="text-cyan-400 text-sm">{exp.company}</span>
-          </div>
-        </div>
-        <motion.span 
-          className="text-cyan-400 text-xl"
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          ▼
-        </motion.span>
-      </div>
-      <motion.div
-        initial={false}
-        animate={{ 
-          height: isExpanded ? 'auto' : 0,
-          opacity: isExpanded ? 1 : 0
-        }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <div className="px-4 pb-4">
-          <span className="text-yellow-400 text-sm font-mono">{exp.period}</span>
-          <p className="text-gray-300 mt-2 text-base">
-            {exp.description}
-          </p>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
   };
 
   // Skill Item Component - Accordion with expand/collapse on hover (simplified style)
@@ -193,7 +100,7 @@ const SkillsSection = () => {
     <section id="skills" className="mb-12">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold font-mono inline-block relative" style={{ color: '#39FF14' }}>
-          Experience & Skills
+          Skills
           <div className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400"></div>
         </h2>
         <div className="flex justify-center mt-2">
@@ -203,36 +110,25 @@ const SkillsSection = () => {
         </div>
       </div>
       
-      <div className="flex flex-col lg:flex-row gap-8">
-        {/* Experience Section - Left Side */}
-        <div className="flex-1">
-          <h3 className="text-3xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Experience</h3>
-          <div className="space-y-3">
-            {experiences.map((exp, index) => (
-              <ExperienceItem key={index} exp={exp} index={index} />
-            ))}
-          </div>
-        </div>
-        
-        {/* Skills Section - Right Side */}
-        <div className="flex-1">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>Technical Skills</h3>
-              <div className="space-y-3">
-                {technicalSkills.map((skill, index) => (
-                  <SkillItem key={index} skill={skill} index={index} />
-                ))}
-              </div>
+      <div className="flex-1">
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Technical Skills - Left Side */}
+          <div className="flex-1 lg:order-1">
+            <h3 className="text-3xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Technical Skills</h3>
+            <div className="space-y-3">
+              {technicalSkills.map((skill, index) => (
+                <SkillItem key={index} skill={skill} index={index} />
+              ))}
             </div>
-            
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>Soft Skills</h3>
-              <div className="space-y-3">
-                {softSkills.map((skill, index) => (
-                  <SkillItem key={index} skill={skill} index={index + technicalSkills.length} />
-                ))}
-              </div>
+          </div>
+          
+          {/* Soft Skills - Right Side */}
+          <div className="flex-1 lg:order-2">
+            <h3 className="text-3xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Soft Skills</h3>
+            <div className="space-y-3">
+              {softSkills.map((skill, index) => (
+                <SkillItem key={`soft-${index}`} skill={skill} index={index} />
+              ))}
             </div>
           </div>
         </div>
@@ -242,3 +138,4 @@ const SkillsSection = () => {
 };
 
 export default SkillsSection;
+
