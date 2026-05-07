@@ -13,8 +13,8 @@ const ProjectsSection = () => {
       image: "/myprojects/wireshark.png"
     },
     {
-      title: "Network Reconnaissance & Vulnerability Scanning",
-      description: "Performed network reconnaissance and vulnerability scanning using Nmap.",
+      title: "BeeHive -  a honeyhpot",
+      description: " A platform desinged to  help organizaions deploy  decoy assets to trap attackers behaviour before and inform them before reaches the real system intrusion",
       image: "/myprojects/nmap.png"
     },
     {
