@@ -6,10 +6,10 @@ const ProgrammingSection = () => {
     { icon: "🐍", name: "Python", level: "Advanced", bgColor: "bg-green-500", details: "Scripting, automation, pentesting tools (Scapy, Requests), exploit development, data analysis for security" },
     { icon: "🔥", name: "JavaScript/TypeScript", level: "Advanced", bgColor: "bg-yellow-500", details: "Web app security testing, Node.js tools, browser extensions, React/Vue for security dashboards" },
     { icon: "🐚", name: "Bash/Shell Scripting", level: "Proficient", bgColor: "bg-orange-500", details: "Automation scripts, log analysis, network enumeration, custom pentest workflows" },
-    { icon: "⚙️", name: "C/C++", level: "Intermediate", bgColor: "bg-blue-500", details: "Exploit development, reverse engineering, low-level security tools, buffer overflow analysis" },
-    { icon: "☕", name: "Java", level: "Proficient", bgColor: "bg-red-500", details: "Enterprise app security, Android pentesting, Spring Boot security, deserialization exploits" },
-    { icon: "📦", name: "Go", level: "Intermediate", bgColor: "bg-purple-500", details: "Modern security tools (Amass, ffuf), high-performance scanners, CLI pentest utilities" },
-    { icon: "🦀", name: "Rust", level: "Intermediate", bgColor: "bg-teal-500", details: "Memory-safe security tools, kernel modules, high-performance fuzzers" }
+    { icon: "⚛️", name: "React", level: "Advanced", bgColor: "bg-cyan-500", details: "Component-driven UI, hooks, state management, accessibility, secure frontend patterns" },
+    { icon: "🟢", name: "Node.js", level: "Advanced", bgColor: "bg-green-600", details: "Server-side JavaScript, REST APIs, Express, authentication, input validation and security hardening" },
+    { icon: "🐘", name: "PostgreSQL", level: "Proficient", bgColor: "bg-blue-700", details: "Relational schema design, indexing, query optimization, backups, secure DB access patterns" },
+    { icon: "🐳", name: "Docker", level: "Proficient", bgColor: "bg-sky-500", details: "Containerization, Dockerfiles, multi-stage builds, Compose, image and runtime hardening" }
   ];
 
   // State for accordion functionality
