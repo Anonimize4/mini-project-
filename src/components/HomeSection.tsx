@@ -12,7 +12,7 @@ const HomeSection = () => {
   const [skillIndex, setSkillIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
-  const [hackMode, setHackMode] = useState(false);
+  
 
   useEffect(() => {
     const current = skills[skillIndex];
@@ -124,30 +124,10 @@ const HomeSection = () => {
             >
           📄 My  Resume
             </motion.a>
-            <motion.button
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              onClick={() => setHackMode(!hackMode)}
-              whileHover={{ scale: 1.06, boxShadow: '0 0 20px rgba(57, 255, 20, 0.8)' }}
-              whileTap={{ scale: 0.95 }}
-              className={`inline-block ${hackMode ? 'bg-green-500' : 'bg-red-500'} text-white font-bold py-3 px-6 rounded-lg font-mono transition-all duration-300`}
-            >
-              {hackMode ? '🛡️ Defense Mode' : '💀 Hack Mode'}
-            </motion.button>
+            
           </div>
 
-          {hackMode && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="mt-6 p-4 bg-black/70 border border-cyan-400 rounded-lg shadow-[0_0_20px_rgba(0,194,255,0.45)]"
-            >
-              <div className="text-sm font-mono text-cyan-200 mb-2">[HACK MODE ACTIVE] | Real-time breach simulation</div>
-              <div className="text-xs font-mono text-green-300 leading-5">booting kernel... 100%\nscanning ports... 7/1024\nattack vector analysis... complete\nexploits ready... 3</div>
-            </motion.div>
-          )}
+          
 
         </motion.div>
 
