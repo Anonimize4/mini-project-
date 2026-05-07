@@ -8,8 +8,8 @@ const ProjectsSection = () => {
       image: "/myprojects/wazuh.png"
     },
     {
-      title: "Network Traffic Analysis",
-      description: "Performed network traffic analysis using Wireshark to identify malicious communication patterns and potential data exfiltration attempts.",
+      title: "lethcon-practicum",
+      description: "a cyber security platform practical ecosystem for everyone who engage in cyber space defend their country and attack against",
       image: "/myprojects/wireshark.png"
     },
     {
