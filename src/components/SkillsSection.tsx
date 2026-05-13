@@ -3,16 +3,6 @@ import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
 
-  const programmingLanguages = [
-    { icon: "🐍", name: "Python", level: "Advanced", bgColor: "bg-green-500", details: "Scripting, automation, pentesting tools (Scapy, Requests), exploit development, data analysis for security" },
-    { icon: "🔥", name: "JavaScript/TypeScript", level: "Advanced", bgColor: "bg-yellow-500", details: "Web app security testing, Node.js tools, browser extensions, React/Vue for security dashboards" },
-    { icon: "🐚", name: "Bash/Shell Scripting", level: "Proficient", bgColor: "bg-orange-500", details: "Automation scripts, log analysis, network enumeration, custom pentest workflows" },
-    { icon: "⚛️", name: "React", level: "Advanced", bgColor: "bg-cyan-500", details: "Component-driven UI, hooks, state management, accessibility, secure frontend patterns" },
-    { icon: "🟢", name: "Node.js", level: "Advanced", bgColor: "bg-green-600", details: "Server-side JavaScript, REST APIs, Express, authentication, input validation and security hardening" },
-    { icon: "🐘", name: "PostgreSQL", level: "Proficient", bgColor: "bg-blue-700", details: "Relational schema design, indexing, query optimization, backups, secure DB access patterns" },
-    { icon: "🐳", name: "Docker", level: "Proficient", bgColor: "bg-sky-500", details: "Containerization, Dockerfiles, multi-stage builds, Compose, image and runtime hardening" }
-  ];
-
   const technicalSkills = [
     { icon: "🔓", name: "Vulnerability Assessment", level: "Advanced", bgColor: "bg-red-500", details: "Risk identification, CVE analysis, security scanning, Nessula, OpenVAS" },
     { icon: "⚔️", name: "Penetration Testing", level: "Advanced", bgColor: "bg-red-600", details: "Web app testing, network pentesting, vulnerability assessment, Metasploit, Burp Suite" },
