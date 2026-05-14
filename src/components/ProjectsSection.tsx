@@ -24,7 +24,7 @@ const ProjectsSection = () => {
     },
     {
       title: "culture quest",
-      description: "Historical cultural game designed for memorizing the past history or ethiopia .",
+      description: "Historical cultural game designed for memorizing the past history of ethiopia .",
       image: "/myprojects/setoolkit.png"
     }
   ];
