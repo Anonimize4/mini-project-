@@ -25,6 +25,12 @@ const SkillsSection = () => {
     { icon: "👥", name: "Leadership", level: "Advanced", bgColor: "bg-rose-500", details: "Leading security initiatives, mentoring 240+ cybersecurity enthusiasts" }
   ];
 
+  const operatingSystems = [
+    { icon: "🐧", name: "Linux" },
+    { icon: "🟠", name: "Ubuntu" },
+    { icon: "🪟", name: "Windows" }
+  ];
+
   // State for accordion functionality
   const [expandedSkill, setExpandedSkill] = useState<number | null>(null);
 
@@ -110,9 +116,24 @@ const SkillsSection = () => {
               ))}
             </div>
           </div>
+
+          {/* Operating Systems - Center */}
+          <div className="flex-1 lg:order-2">
+            <h3 className="text-3xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Operating Systems</h3>
+            <div className="space-y-3">
+              {operatingSystems.map((os, index) => (
+                <div key={`os-${index}`} className="border border-emerald-500/30 rounded-lg bg-gray-800/30 p-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{os.icon}</span>
+                    <span className="text-white font-semibold text-lg">{os.name}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
           
           {/* Soft Skills - Right Side */}
-          <div className="flex-1 lg:order-2">
+          <div className="flex-1 lg:order-3">
             <h3 className="text-3xl font-semibold mb-6 font-mono" style={{ color: '#39FF14' }}>Soft Skills</h3>
             <div className="space-y-3">
               {softSkills.map((skill, index) => (
