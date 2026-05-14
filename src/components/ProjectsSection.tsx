@@ -8,9 +8,9 @@ const ProjectsSection = () => {
       image: "/myprojects/wazuh.png"
     },
     {
-      title: "lethcon-practicum",
+      title: "bdu cyber sec",
       description: "a cyber security platform practical ecosystem for everyone who engage in cyber space defend their country and attack against",
-      image: "/myprojects/wireshark.png"
+      image: "/myprojects/bdu-cyber-sec.png"
     },
     {
       title: "BeeHive -  a honeyhpot",
@@ -23,12 +23,11 @@ const ProjectsSection = () => {
       image: "/myprojects/burp.png"
     },
     {
-      title: "Phishing Simulation",
-      description: "Conducted phishing simulation exercises using Setoolkit in controlled environments.",
+      title: "culture quest",
+      description: "Historical cultural game designed for memorizing the past history or ethiopia .",
       image: "/myprojects/setoolkit.png"
     }
   ];
-
 
 
   return (
