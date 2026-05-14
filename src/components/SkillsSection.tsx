@@ -13,8 +13,7 @@ const SkillsSection = () => {
     { icon: "🌐", name: "Network Security", level: "Advanced", bgColor: "bg-cyan-500", details: "Firewall configuration, IDS/IPS, VPN, network monitoring, segmentation" },
     { icon: "📝", name: "Technical Documentation", level: "Advanced", bgColor: "bg-teal-500", details: "Security reports, penetration testing reports, risk assessments, procedures" },
     { icon: "🔎", name: "Digital Forensics", level: "Intermediate", bgColor: "bg-indigo-500", details: "Evidence collection, forensic analysis, chain of custody, reporting" },
-    { icon: "⚖️", name: "GRC Compliance", level: "Advanced", bgColor: "bg-green-600", details: "ISO 27001, GDPR, PCI DSS, INSA 29001, compliance frameworks" },
-    { icon: "🖥️", name: "System Administration", level: "Intermediate", bgColor: "bg-slate-500", details: "Linux administration, Windows server, network configuration, hardening" }
+    { icon: "⚖️", name: "GRC Compliance", level: "Advanced", bgColor: "bg-green-600", details: "ISO 27001, GDPR, PCI DSS, INSA 29001, compliance frameworks" }
   ];
 
   const softSkills = [
