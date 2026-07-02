@@ -58,7 +58,7 @@ const AboutSection = () => {
         >
           <h3 className="text-3xl font-semibold mb-4 font-mono" style={{ color: '#39FF14' }}>whoami?</h3>
           <p className="text-white text-lg leading-relaxed mb-4">
-            Hello! I'm Samuel Belay, a BSc in Cyber Security graduate from Bahirdar University. 
+            Hello! I'm Samuel Belay, a BSc in Cyber Security graduate from Bahirdar University now living in Addis Ababa. 
             I'm a passionate tech person who is creative, collaborative, strong, and dedicated to achieving 
             any given task successfully.
           </p>
@@ -69,7 +69,10 @@ const AboutSection = () => {
             penetration testing and secure coding practices that made me more confident in my abilities.
           </p>
           <p className="text-white text-lg leading-relaxed">
-            I have also worked at the innovation team at Bahirdar University.
+            I have also worked with the innovation team at Bahirdar University while studying there.
+          </p>
+          <p className="text-white text-lg leading-relaxed mt-4">
+            I now live in Addis Ababa and I have fully completed my BSc in Cyber Security.
           </p>
           <p className="text-white text-lg leading-relaxed mt-4">
             My interests include penetration testing, cloud security, and understanding attacker behavior.

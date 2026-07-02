@@ -111,7 +111,7 @@ const ProjectsSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <h3 className="text-white font-semibold text-xl mb-2 font-mono">Cybersecurity Graduate</h3>
+          <h3 className="text-white font-semibold text-xl mb-2 font-mono">BSc in Cyber Security</h3>
           <p className="text-cyan-400 text-lg mb-2">Bahirdar University</p>
           <p className="text-yellow-400 text-sm font-mono">2022 - 2026</p>
         </motion.div>
