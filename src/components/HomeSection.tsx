@@ -12,7 +12,7 @@ const HomeSection = () => {
   const [skillIndex, setSkillIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
-  
+
 
   useEffect(() => {
     const current = skills[skillIndex];
@@ -44,7 +44,7 @@ const HomeSection = () => {
     <section id="home" className="mb-12 relative grid-bg overflow-hidden text-white">
       <div className="scanline absolute inset-0 pointer-events-none" />
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -57,7 +57,7 @@ const HomeSection = () => {
             transition={{ duration: 0.5 }}
             className="text-4xl text-red-500 font-bold mb-6"
           >
-            Ethical Hacker and Penetration Tester
+            DevSecOps Engineer | SOC Analyst | Incident Responder | Security Engineer
           </motion.h1>
 
           <motion.div
@@ -122,25 +122,25 @@ const HomeSection = () => {
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg font-mono transition-all duration-300"
             >
-          📄 My  Resume
+              📄 My  Resume
             </motion.a>
-            
+
           </div>
 
-          
+
 
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex-shrink-0 relative"
         >
           <div className="relative">
-            <motion.img 
+            <motion.img
               src={profileImage}
-              alt="Samuel Belay" 
+              alt="Samuel Belay"
               className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover"
               onError={(e) => {
                 e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMUYyOTNCIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSIzMCIgZmlsbD0iI0Y5RkFGQiIvPgo8cGF0aCBkPSJNNDAgMTYwQzQwIDE0MCA2MCA5MCAxMDAgOTBTMTYwIDE0MCAxNjAgMTYwVjIwMEg0MFYxNjBaIiBmaWxsPSIjRjlGQUZCIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRjlGQUZCIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiPlNBTUVFTCwgU0FNVUVMPC90ZXh0Pgo8L3N2Zz4K';

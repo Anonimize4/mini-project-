@@ -18,9 +18,9 @@ const ProjectsSection = () => {
       image: "/myprojects/nmap.png"
     },
     {
-      title: "OWASP Top 10 Testing",
-      description: "Tested OWASP Top 10 vulnerabilities (XSS, SQL Injection) in controlled lab environments using Burp Suite.",
-      image: "/myprojects/burp.png"
+      title: "LethCon - Cyber-Range Platform",
+      description: "●Designed and developed a cybersecurity cyber-range platform using PostgreSQL, Express.js, React, and Node.js to provide hands-on security training environments.\n●Developed CTF-style challenges and practical offensive and defensive security scenarios covering penetration testing, network defense, incident response, and phishing awareness.\n●Incorporated phishing-awareness exercises to help learners identify common phishing techniques, suspicious links, fraudulent communications, and social-engineering indicators.\n●Built backend",
+      image: "/myprojects/lethcon.png"
     },
     {
       title: "culture quest",
@@ -44,11 +44,11 @@ const ProjectsSection = () => {
           ))}
         </div>
       </div>
-      
+
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {projects.map((project, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             className="rounded-lg overflow-hidden bg-gray-800/50 border border-emerald-500/30 hover:border-emerald-400/50 transition-all duration-300"
             whileHover={{ scale: 1.02, y: -5 }}
